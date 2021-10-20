@@ -14,6 +14,19 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//try at login page md
+Route::get('/mdlogin', function () {
+    return view('mdlogin');
+});
+
+Route::get('/mdregister', function () {
+    return view('mdregister');
+});
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -47,14 +60,14 @@ Route::get('/subs', function () {
     return view('subs');
 });
 
-Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/', function () {
+//     return Inertia::render('welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+//});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -62,4 +75,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::post('/create', 'Controller@create');
+Route::post('/newpost', 'Controller@newpost');
+
+Route::get('/editor', 'Controller@showAll');

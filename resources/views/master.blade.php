@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Magic Movies</title>
+<title>@yield('title')</title>
 
 <!-- Fonts -->
 
@@ -24,63 +24,74 @@
 
 </head>
 
-<body>   
+<body class="bg-gray-500">   
     <a name="top"></a>
 
-    <div class="container1"> 
+   
 
-        <div id="navimage">
-        </div>        
-        
-        <nav>                          
-            <ul class="menu"> 
-                                              
-                <li><a href="/welcome">Home</a></li>
-                @auth
-                <li><a href="/contact">Submit Content</a></li>                
-                <li><a href="/editor">Editor</a></li> 
-                @endauth 
-                <li><a href="/contact">Contact</a></li>  
-                  
-                    @if (Route::has('login'))
-                        {{-- <div class="hidden fixed top-5vh right-0 px-6 py-4 sm:block"> --}}
-                            @auth
-                            {{-- <li>
-                                <a href="{{ url('/') }}"></a>
-                            </li> --}}
-                            @else
+    <div id="navimage">
+    </div>        
+    
+    <nav>                          
+        <ul class="menu"> 
+                                            
+            <li><a href="/welcome">Home</a></li>
+            @auth
+            <li><a href="/contact">Submit Content</a></li>                
+            <li><a href="/editor">Editor</a></li> 
+            @endauth 
+            <li><a href="/contact">Contact</a></li>  
+                
+                @if (Route::has('login'))
+                    {{-- <div class="hidden fixed top-5vh right-0 px-6 py-4 sm:block"> --}}
+                        @auth
+                        {{-- <li>
+                            <a href="{{ url('/') }}"></a>
+                        </li> --}}
+                        @else
+                        <li>
+                            <a href="/mdlogin">Login</a>
+                        </li>
+    
+                            @if (Route::has('register'))
                             <li>
-                                <a href="{{ route('login') }}">Login</a>
+                                <a href="/mdregister">Register</a>
                             </li>
+                            @endif
+                        @endauth
+                    {{-- </div> --}}
+                @endif
         
-                                @if (Route::has('register'))
-                                <li>
-                                    <a href="{{ route('register') }}">Register</a>
-                                </li>
-                                @endif
-                            @endauth
-                        </div>
-                    @endif
+                    {{-- @hasrole('admin|editor|manager')
+                    <a href="https://google.com/%22%3E Create a new Blogo  </a>
+                    @endhasrole --}}
             
-                        {{-- @hasrole('admin|editor|manager')
-                        <a href="https://google.com/%22%3E Create a new Blogo  </a>
-                        @endhasrole --}}
-                    
-                                                            
-            </ul>   
-            
-               
-        </nav>        
-      
+            @auth        
+            <li>           
+                
+                <!-- Authentication -->
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-responsive-nav-link>
+                </form>
+                
+            </li>
+            @endauth                                            
+        </ul>   
         
-      
+            
+    </nav>        
+        
+    <div class="flex">     
         <div class="wrapper">
-            <div id="left">
-                <div class="wrapper">
-                    @yield('content')
-                </div>
-            </div>
-        </div>
+            @yield('content')
+        </div>        
+    </div>
        
         {{-- <div class="form container1">
         <div class="wrapper">
@@ -93,7 +104,7 @@
 
 
     
-    </div>
+    
     
     <div class="footer-basic">       
         <footer>

@@ -14,12 +14,15 @@ html {
 
 body,
 html {
-    width: 100%;
-    height: 100%;
-    background: #1c1d22 !important;
+    width: 100vw;
+    height: fit-content;
     font-family: "Varela Round", sans-serif;
     color: whitesmoke;
     //margin-bottom: 10vh;
+}
+
+h2 {
+    padding: 2vh 2vw;
 }
 
 #navimage {
@@ -46,13 +49,12 @@ html {
     transition: background-position-x 0.9s linear;
     justify-content: center;
     text-align: center;
-    background-color: rgba(63, 58, 58, 0.815);
     border-radius: 7%;
     //margin-top: 15vh;
     padding: 0.5vh 0.5vw;
 
     a {
-        font-size: 22px;
+        font-size: 2.2vh;
         color: white;
         text-decoration: none;
         transition: all 0.45s;
@@ -78,8 +80,18 @@ html {
 }
 
 .wrapper {
-    min-height: 59vh;
+    min-height: 50vh;
     color: gold;
+    background-color: rgba(163, 158, 158, 0.664);
+    width: 80vw;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding: 5vw;
 }
 
 .footer-basic {
@@ -87,17 +99,17 @@ html {
     background-color: rgb(95, 27, 42);
     border: gold outset 0.2vw;
     color: whitesmoke;
-    height: fit-content;
-    margin-bottom: 0;
-    position: fixed;
+    bottom: 0;
     width: 100vw;
+    position: absolute;
+    height: fit-content;
 }
 
 .footer-basic ul {
     padding: 0;
     list-style: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8vh;
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -123,7 +135,7 @@ html {
 }
 
 .footer-basic .social > a {
-    font-size: 24px;
+    font-size: 2.4vh;
     width: 40px;
     height: 40px;
     line-height: 40px;
