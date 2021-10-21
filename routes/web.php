@@ -23,6 +23,10 @@ Route::get('/mdregister', function () {
     return view('mdregister');
 });
 
+Route::get('/mdforgot-password', function () {
+    return view('mdforgot-password');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,9 +40,17 @@ Route::get('/app', function () {
     return view('app');
 });
 
-Route::get('/post', function () {
-    return view('post');
-});
+//delete function
+Route::delete('/post/{id}', 'Controller@delete');
+
+Route::delete('/subs/{id}', 'Controller@deleteSub');
+
+// Route::get('/post', function () {
+//     return view('post');
+// });
+
+Route::get('/article/{id}', 'Controller@view');
+
 
 Route::get('/article', function () {
     return view('article');
@@ -77,4 +89,8 @@ require __DIR__ . '/auth.php';
 
 Route::post('/newpost', 'Controller@newpost');
 
+Route::post('/newsub', 'Controller@newsub');
+
 Route::get('/editor', 'Controller@showAll');
+
+Route::get('/editor/{id}', 'Controller@view');

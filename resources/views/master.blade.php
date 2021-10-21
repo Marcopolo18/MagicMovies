@@ -13,9 +13,6 @@
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" url="public/favicon.ico">
-
 <script src="{{ mix('js/app.js') }}" defer></script>
 <!-- Styles -->
 {{-- <style>
@@ -24,7 +21,7 @@
 
 </head>
 
-<body class="bg-gray-500">   
+<body class="bg-gray-900">   
     <a name="top"></a>
 
    
@@ -37,7 +34,7 @@
                                             
             <li><a href="/welcome">Home</a></li>
             @auth
-            <li><a href="/contact">Submit Content</a></li>                
+            <li><a href="/subs">Submit Content</a></li>                
             <li><a href="/editor">Editor</a></li> 
             @endauth 
             <li><a href="/contact">Contact</a></li>  
@@ -109,12 +106,11 @@
     <div class="footer-basic">       
         <footer>
             
-            <ul class="list-inline">
-                <li class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></li>
-                <li class="list-inline-item"><a href="#top">Back to top of page</a></li>                
-                <li class="copyright">MagicMovies © 2018</li>             
-            </ul>
-            
+            <ul class="list-inline flex justify-between">
+                <li class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></li>                     
+                <li class="copyright">MagicMovies © 2018</li>
+                <li class="topPage"><a href="#top">Back to top of page</a></li>             
+            </ul>           
             
         </footer>             
     </div>
