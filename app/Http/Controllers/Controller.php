@@ -13,6 +13,7 @@ use App\Models\Subs;
 
 
 
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -55,6 +56,20 @@ class Controller extends BaseController
             'posts' => $posts,
             'subs' => $subs,
         ]);
+    }
+
+    public function allPosts()
+    {
+        // $posts = Post::all();
+
+        // return view('/welcome', [
+        //     'posts' => $posts
+
+
+        // ]);
+        $posts = Post::latest()->paginate(5);
+
+        return view('/welcome')->with('posts', $posts);
     }
 
     public function view($id)

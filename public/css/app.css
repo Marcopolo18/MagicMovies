@@ -24,7 +24,8 @@ html {
 }
 
 h2 {
-  padding: 2vh 2vw;
+  padding-top: 2vh;
+  padding-left: 0;
 }
 
 #navimage {
@@ -60,7 +61,7 @@ h2 {
 }
 .menu li a {
   font-size: 2.2vh;
-  color: white;
+  color: whitesmoke;
   text-decoration: none;
   transition: all 0.45s;
 }
@@ -87,7 +88,7 @@ h2 {
 }
 .wrapper {
   min-height: 50vh;
-  color: gold;
+  color: #5f1b2a;
   background-color: rgba(163, 158, 158, 0.664);
   border-radius: 30px;
   width: 80vw;
@@ -98,6 +99,11 @@ h2 {
   margin-top: 3vh;
   margin-bottom: 15vh;
   padding: 2vw;
+}
+
+.posted {
+  background-color: rgba(95, 27, 42, 0.459);
+  padding-left: 3vw;
 }
 
 .footer-basic {
@@ -142,14 +148,14 @@ h2 {
 }
 
 .footer-basic .social > a {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 4vw;
+  height: 4vh;
+  line-height: 4vh;
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #ccc;
-  margin: 0 8px;
+  border: 0.1vw solid #ccc;
+  margin: 0 0.8vh;
   color: inherit;
   opacity: 0.75;
 }
@@ -159,7 +165,7 @@ h2 {
 }
 
 .footer-basic .copyright .topPage {
-  margin-top: 15px;
+  margin-top: 1.5vh;
   text-align: center;
   color: #aaa;
   margin-bottom: 0;
@@ -176,15 +182,33 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  background: #f2f3eb;
+#contactForm {
+  margin-top: 2vh;
+}
+
+#formBtn {
+  background-color: rgba(95, 27, 42, 0.534);
+  border: 0.1vw solid;
+  border-radius: 7%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1vh;
 }
 
 button {
   overflow: visible;
 }
 
-button,
+#telephone_input,
+#name_input,
+#subject_input {
+  color: #474544;
+  background-color: whitesmoke;
+  font-size: 1em;
+  justify-content: center;
+}
+
 select {
   text-transform: none;
 }
@@ -193,7 +217,7 @@ button,
 input,
 select,
 textarea {
-  color: #5a5a5a;
+  color: #474544;
   font: inherit;
   margin: 0;
 }
@@ -207,43 +231,46 @@ textarea {
 }
 
 #container {
-  border: solid 3px #474544;
-  max-width: 768px;
-  margin: 60px auto;
+  border: solid 0.3vw #474544;
+  max-width: 79vw;
+  margin: 3vw auto;
   position: relative;
+  background-color: rgba(211, 211, 211, 0.685);
+  padding: 2vh 2vw;
 }
 
 form {
-  padding: 37.5px;
-  margin: 50px 0;
+  padding: 3.8vw 3.8vh;
+  margin: 3vw 0;
 }
 
 h1 {
-  color: #474544;
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 7px;
+  color: rgba(95, 27, 42, 0.534);
+  font-size: 1.5vh;
+  font-weight: 500;
+  letter-spacing: 0.3vw;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 3vh;
 }
 
 .underline {
-  border-bottom: solid 2px #474544;
+  border-bottom: solid 0.2vh #474544;
   margin: -0.512em auto;
-  width: 80px;
+  width: 8vw;
 }
 
 .icon_wrapper {
-  margin: 50px auto 0;
+  margin: 2vh auto 0;
   width: 100%;
 }
 
 .icon {
   display: block;
   fill: #474544;
-  height: 50px;
+  height: 5vh;
   margin: 0 auto;
-  width: 50px;
+  width: 5vw;
 }
 
 .email {
@@ -257,11 +284,11 @@ select,
 textarea {
   background: none;
   border: none;
-  border-bottom: solid 2px #474544;
-  color: #474544;
+  border-bottom: solid 0.2vh #474544;
+  color: rgba(95, 27, 42, 0.534);
   font-size: 1em;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.1vw;
   margin: 0em 0 1.875em 0;
   padding: 0 0 0.875em 0;
   text-transform: uppercase;
@@ -277,6 +304,7 @@ input[type=text]:focus,
 textarea:focus {
   outline: none;
   padding: 0 0 0.875em 0;
+  font-size: 1em;
 }
 
 .message {
@@ -309,7 +337,7 @@ select::-ms-expand {
 
 textarea {
   line-height: 150%;
-  height: 150px;
+  height: 15vh;
   resize: none;
   width: 100%;
 }
@@ -334,7 +362,8 @@ textarea {
 
 #form_button {
   background: none;
-  border: solid 2px #474544;
+  border: solid 0.2vw #474544;
+  border-radius: 7%;
   color: #474544;
   cursor: pointer;
   display: inline-block;
@@ -342,7 +371,7 @@ textarea {
   font-size: 0.875em;
   font-weight: bold;
   outline: none;
-  padding: 20px 35px;
+  padding: 1vw;
   text-transform: uppercase;
   transition: all 0.3s;
 }
@@ -354,35 +383,35 @@ textarea {
 
 @media screen and (max-width: 768px) {
   #container {
-    margin: 20px auto;
+    margin: 2vw auto;
     width: 95%;
   }
 }
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 26px;
+    font-size: 2.6vh;
   }
 
   .underline {
-    width: 68px;
+    width: 6.8vw;
   }
 
   #form_button {
-    padding: 15px 25px;
+    padding: 1.5vw 2.5vh;
   }
 }
 @media screen and (max-width: 420px) {
   h1 {
-    font-size: 18px;
+    font-size: 1.8vh;
   }
 
   .icon {
-    height: 35px;
-    width: 35px;
+    height: 3.5vh;
+    width: 3.5vw;
   }
 
   .underline {
-    width: 53px;
+    width: 5.3vw;
   }
 
   input[type=text],

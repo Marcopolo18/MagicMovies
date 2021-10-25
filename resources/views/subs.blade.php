@@ -4,8 +4,8 @@
 <div class="py-12">
     <h2>Create a new post. We will review it prior to posting to ascertain that it meets our standards: </h2>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-6 bg-white border-b border-gray-200">
+        <div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 bg-gray-300 border-b border-gray-200">
                 You're logged in!
                 <form action="/newsub" method="post">
                     <input class="inputs" type="text" name="category" placeholder="Category" autocomplete="off">

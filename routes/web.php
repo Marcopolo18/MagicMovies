@@ -94,3 +94,12 @@ Route::post('/newsub', 'Controller@newsub');
 Route::get('/editor', 'Controller@showAll');
 
 Route::get('/editor/{id}', 'Controller@view');
+
+//why if / is defined as /welcome?
+
+Route::get('/', 'Controller@allPosts');
+
+Route::get('/welcome', 'Controller@allPosts');
+
+
+//Route::get('/welcome/{id}', 'Controller@view');

@@ -22,14 +22,12 @@
 </head>
 
 <body class="bg-gray-900">   
-    <a name="top"></a>
-
-   
+    <a name="top"></a>   
 
     <div id="navimage">
     </div>        
     
-    <nav>                          
+    <nav class="flex">                          
         <ul class="menu"> 
                                             
             <li><a href="/welcome">Home</a></li>

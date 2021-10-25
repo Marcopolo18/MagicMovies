@@ -37,7 +37,7 @@
         <label for="message"></label>
         <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
       </div>
-      <div class="submit">
+      <div id="formBtn">
         <input type="submit" value="Send Message" id="form_button" />
       </div>
     </form><!-- // End form -->
