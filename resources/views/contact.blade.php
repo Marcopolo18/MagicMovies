@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 
-<div id="container">
+<div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg" id="container">
     <h1>&bull; Keep in Touch &bull;</h1>
     <div class="underline">
     </div>

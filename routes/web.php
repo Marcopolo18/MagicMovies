@@ -3,6 +3,9 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ArticleController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,9 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', [ArticleController::class, 'allArticles']);
+
 //try at login page md
 Route::get('/mdlogin', function () {
     return view('mdlogin');
@@ -27,14 +33,14 @@ Route::get('/mdforgot-password', function () {
     return view('mdforgot-password');
 });
 
+//try image post md
+// Route::post(
+//     'uploadImage',
+//     'Controller@uploadImage'
+// )->name('images.uploadImage');
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+Route::get('/welcome', [ArticleController::class, 'allArticles'])->name('welcome');
 
 Route::get('/app', function () {
     return view('app');
@@ -87,7 +93,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::post('/newpost', 'Controller@newpost');
+Route::post('/newpost', [ArticleController::class, 'storeArticle']);
 
 Route::post('/newsub', 'Controller@newsub');
 
@@ -97,9 +103,6 @@ Route::get('/editor/{id}', 'Controller@view');
 
 //why if / is defined as /welcome?
 
-Route::get('/', 'Controller@allPosts');
-
-Route::get('/welcome', 'Controller@allPosts');
-
+// Route::get('/', 'Controller@allPosts');
 
 //Route::get('/welcome/{id}', 'Controller@view');
