@@ -106,3 +106,6 @@ Route::get('/editor/{id}', 'Controller@view');
 // Route::get('/', 'Controller@allPosts');
 
 //Route::get('/welcome/{id}', 'Controller@view');
+
+//try at search md
+Route::get('/search/', 'ArticleController@search')->name('search');

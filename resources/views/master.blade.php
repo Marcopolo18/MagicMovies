@@ -27,80 +27,69 @@
     <div id="navimage">
     </div>        
     
-    <nav class="flex">                          
-        <ul class="menu"> 
+    <nav class="flex justify-between" id="navbar">                          
+        <ul class="flex" id="menu"> 
                                             
-            <li><a href="/welcome">Home</a></li>
+            <li class="flex"><a class="place-self-center" href="/welcome">Home</a></li>
             @auth
-            <li><a href="/subs">Submit Content</a></li>                
-            <li><a href="/editor">Editor</a></li> 
+            <li class="flex" ><a class="place-self-center" href="/subs">Submit</a></li>                
+            <li class="flex"><a class="place-self-center" href="/editor">Editor</a></li> 
             @endauth 
-            <li><a href="/contact">Contact</a></li>  
+            <li class="flex"><a class="place-self-center" href="/contact">Contact</a></li>  
                 
                 @if (Route::has('login'))
-                    {{-- <div class="hidden fixed top-5vh right-0 px-6 py-4 sm:block"> --}}
-                        @auth
-                        {{-- <li>
-                            <a href="{{ url('/') }}"></a>
-                        </li> --}}
-                        @else
-                        <li>
-                            <a href="/mdlogin">Login</a>
-                        </li>
-    
-                            @if (Route::has('register'))
-                            <li>
-                                <a href="/mdregister">Register</a>
-                            </li>
-                            @endif
-                        @endauth
-                    {{-- </div> --}}
-                @endif
-        
+                    @auth
+                    {{-- <li>
+                        <a href="{{ url('/') }}"></a>
+                    </li> --}}
+                @else
+                    
+                <li class="flex"><a class="place-self-center" href="/mdlogin">Login</a></li>
+                    
+
+                    @if (Route::has('register'))
+                    <li class="flex">
+                        <a class="place-self-center" href="/mdregister">Register</a>
+                    </li>
+                    @endif
+                    @endauth                         
+                @endif               
+                
                     {{-- @hasrole('admin|editor|manager')
                     <a href="https://google.com/%22%3E Create a new Blogo  </a>
                     @endhasrole --}}
-            
             @auth        
-            <li>           
-                
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
+            <!-- Authentication -->
+            <form class="p-0 m-0 flex-inline" id="logout" method="POST" action="{{ route('logout') }}">
+                <li class="flex">
                     @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
+                    <a class="place-self-center" href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
-                    </x-responsive-nav-link>
+                    </a>
+                </li>
+            </form>                                    
+            @endauth 
+            <li class="flex p-0 ml-9">  
+                <form class="place-self-center" id="search" action="{{ route('search') }}" method="GET">
+                   
+                    <input  id="caret" type="text" name="search" required/>                    
+                    <button id="searchbtn" type="submit">Search</button>
+                                
                 </form>
-                
-            </li>
-            @endauth                                            
-        </ul>   
-        
+            </li>                                              
+        </ul>    
+          
+    </nav>   
             
-    </nav>        
-        
-    <div class="flex">     
-        <div class="wrapper">
+    <div class="flex">
+        <div id="wrapper">       
             @yield('content')
         </div>        
-    </div>
+    </div>        
+   
        
-        {{-- <div class="form container1">
-        <div class="wrapper">
-        <form action="{{ route('search') }}" method="GET">
-        <input type="text" name="search" required/>
-        <button name="submit" class="inline-flex items-center mt-1 px-4 py-2 mx-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Search</button>
-        <a href="/dashboard" id="login" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Login</a>
-        </form> --}}
-    
-
-
-    
-    
-    
     <div class="footer-basic">       
         <footer>
             
