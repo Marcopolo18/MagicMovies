@@ -25,10 +25,11 @@ html {
 
 h3 {
   padding-top: 2vh;
+  padding-left: 0;
 }
 
 h2 {
-  padding-left: 5vw;
+  padding-left: 2vw;
 }
 
 #navimage {
@@ -53,7 +54,9 @@ h2 {
 
 #caret {
   width: 8vw;
-  border-color: rgba(245, 245, 245, 0.055);
+  text-decoration: none;
+  padding: 0;
+  border-color: black;
 }
 
 #search {
@@ -65,9 +68,40 @@ h2 {
   color: black;
 }
 
+.postText {
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+#newsub,
+#newpost {
+  margin-top: 3vh;
+  color: whitesmoke;
+  border: solid 0.2vw #474544;
+  border-radius: 7%;
+}
+#newsub:hover,
+#newpost:hover {
+  background-color: gray;
+  color: black;
+}
+
+#showpost,
+#showsubs {
+  color: whitesmoke;
+  border: solid 0.2vw #474544;
+  border-radius: 7%;
+}
+#showpost:hover,
+#showsubs:hover {
+  background-color: gray;
+  color: black;
+}
+
 #menu li,
 #search,
-#logout {
+#logout,
+#backBtn {
   color: whitesmoke;
   font-size: 2.2vh;
   width: -webkit-fit-content;
@@ -82,7 +116,8 @@ h2 {
 }
 #menu li a,
 #search a,
-#logout a {
+#logout a,
+#backBtn a {
   font-size: 2.2vh;
   color: whitesmoke;
   text-decoration: none;
@@ -90,7 +125,8 @@ h2 {
 }
 #menu li:hover,
 #search:hover,
-#logout:hover {
+#logout:hover,
+#backBtn:hover {
   background-color: rgba(245, 245, 245, 0.541);
 }
 #menu li:hover a,
@@ -98,13 +134,38 @@ h2 {
 #search:hover a,
 #search input,
 #logout:hover a,
-#logout input {
+#logout input,
+#backBtn:hover a,
+#backBtn input {
   color: black;
 }
 #menu li:not(:last-child),
 #search:not(:last-child),
-#logout:not(:last-child) {
+#logout:not(:last-child),
+#backBtn:not(:last-child) {
   margin-right: 3vw;
+}
+
+#backBtn {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(18, 11, 36, 0.883);
+  border: solid 0.2vw #474544;
+  border-radius: 7%;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: 1.7vh;
+  padding: 1vh 1vw;
+  text-decoration: none;
+}
+#backBtn:hover {
+  background-color: gray;
+  color: black;
 }
 
 @-webkit-keyframes line {
@@ -118,6 +179,14 @@ h2 {
     background-position-x: 390px;
   }
 }
+#link {
+  color: black;
+  text-decoration: underline;
+}
+#link:hover {
+  color: blue;
+}
+
 #wrapper {
   min-height: 50vh;
   color: black;
@@ -134,7 +203,8 @@ h2 {
   padding-bottom: 4vh;
 }
 
-#showposts {
+#soloArt,
+#showSubs {
   margin: 1vw 4vh;
 }
 
@@ -156,94 +226,22 @@ h2 {
   border: goldenrod outset 0.3vw;
 }
 
-.footer-basic {
-  padding: 2vh;
-  background-color: #5f1b2a;
-  border: gold outset 0.2vw;
-  color: whitesmoke;
-  bottom: 0;
-  width: 100vw;
-  position: fixed;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.footer-basic ul {
-  padding: 0;
-  list-style: none;
-  font-size: 1.8vh;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.footer-basic li {
-  padding: 0 1vw;
-}
-
-.footer-basic ul a {
-  color: inherit;
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-.footer-basic ul a:hover {
-  opacity: 1;
-}
-
-.footer-basic .social {
-  text-align: center;
-  padding-bottom: 1vh;
-  color: darkgray;
-}
-
-.footer-basic .social > a {
-  width: 4vw;
-  height: 4vh;
-  line-height: 4vh;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  border: 0.1vw solid #ccc;
-  margin: 0 0.8vh;
-  color: inherit;
-  opacity: 0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity: 0.9;
-}
-
-.footer-basic .copyright .topPage {
-  margin-top: 1.5vh;
-  text-align: center;
-  color: #aaa;
-  margin-bottom: 0;
-  padding-bottom: 1vh;
-}
-
-#create {
-  margin: 1vh 1vw;
-}
-
 html {
   font-family: "Montserrat", Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-#contactForm {
+#create {
+  margin: 1vh 1vw;
+}
+
+#contact_form {
   margin-top: 2vh;
 }
 
-#formBtn {
-  background-color: rgba(95, 27, 42, 0.534);
-  border: 0.1vw solid;
-  border-radius: 7%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-top: 1vh;
+body {
+  background: #f2f3eb;
 }
 
 button {
@@ -252,11 +250,13 @@ button {
 
 #telephone_input,
 #name_input,
-#subject_input {
-  color: #474544;
+#subject_input,
+#email_input {
+  color: black;
   background-color: whitesmoke;
   font-size: 1em;
   justify-content: center;
+  align-content: center;
 }
 
 select {
@@ -267,7 +267,7 @@ button,
 input,
 select,
 textarea {
-  color: #474544;
+  color: black;
   font: inherit;
   margin: 0;
 }
@@ -282,7 +282,7 @@ textarea {
 
 #container {
   border: solid 0.3vw #474544;
-  max-width: 79vw;
+  max-width: 70vw;
   margin: 3vw auto;
   position: relative;
   background-color: rgba(211, 211, 211, 0.685);
@@ -295,7 +295,7 @@ form {
 }
 
 h1 {
-  color: rgba(95, 27, 42, 0.534);
+  color: black;
   font-size: 1.5vh;
   font-weight: 500;
   letter-spacing: 0.3vw;
@@ -335,7 +335,7 @@ textarea {
   background: none;
   border: none;
   border-bottom: solid 0.2vh #474544;
-  color: rgba(95, 27, 42, 0.534);
+  color: black;
   font-size: 1em;
   font-weight: 400;
   letter-spacing: 0.1vw;
@@ -411,10 +411,10 @@ textarea {
 }
 
 #form_button {
-  background: none;
+  background-color: rgba(18, 11, 36, 0.883);
   border: solid 0.2vw #474544;
   border-radius: 7%;
-  color: #474544;
+  color: whitesmoke;
   cursor: pointer;
   display: inline-block;
   font-family: "Helvetica", Arial, sans-serif;
@@ -424,11 +424,16 @@ textarea {
   padding: 1vw;
   text-transform: uppercase;
   transition: all 0.3s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 5vh;
+  margin-right: auto;
+  margin-left: auto;
 }
-
 #form_button:hover {
-  background: #474544;
-  color: #f2f3eb;
+  background-color: gray;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -470,6 +475,71 @@ select,
 textarea {
     font-size: 0.875em;
   }
+}
+.footer-basic {
+  padding: 2vh;
+  background-color: #5f1b2a;
+  border: gold outset 0.2vw;
+  color: whitesmoke;
+  bottom: 0;
+  width: 100vw;
+  position: fixed;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  font-size: 1.8vh;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 1vw;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 1vh;
+  color: darkgray;
+}
+
+.footer-basic .social > a {
+  width: 4vw;
+  height: 4vh;
+  line-height: 4vh;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 0.1vw solid #ccc;
+  margin: 0 0.8vh;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright .topPage {
+  margin-top: 1.5vh;
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 0;
+  padding-bottom: 1vh;
 }
 /*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com */
 

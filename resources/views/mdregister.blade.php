@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form method="POST" action="{{ route('register') }}">
+<form class="bg-gray-300 w-70 p-6 m-3 align-content:center justify-content:center" method="POST" action="{{ route('register') }}">
     @csrf
 
     <!-- Name -->
@@ -39,7 +39,7 @@
     </div>
 
     <div class="flex items-center justify-end mt-4">
-        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="/mdlogin">
+        <a class="text-sm text-gray-600 hover:text-gray-900" href="/mdlogin">
             {{ __('Already registered?') }}
         </a>
 

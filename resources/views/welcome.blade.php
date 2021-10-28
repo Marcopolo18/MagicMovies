@@ -16,17 +16,20 @@
                                 <div class="blogPic">
                                     <img src="/images/{{ $article->file_path }}">                                
                                 </div>
-                                <b><h3><a href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>             
-                                created by: {{$article->author}}<br>
-                                {{$article->created_at->diffForHumans()}}<br>
-                                {{$article->content}}<br>
-                                
+
+                                <div class="postText">
+                                    <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>             
+                                    <b>Created {{$article->created_at->diffForHumans()}}
+                                    by {{$article->author}}</b><br><br>
+                                    {{$article->content}}<br><br>
+                                    <b>Category: {{$article->category}}</b><br>
+                                </div>
                         @auth
                        
                             <form action="/post/{{$article->id}}" method="post">
                             @csrf
                             @method('delete')
-                            <button id="showpost" class="inline-flex disabled items-center px-4 py-2 mx-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
+                            <button id="showpost" class="inline-flex disabled items-center px-4 py-2 mx-2 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
                             </form>
                        
                         @endauth                        

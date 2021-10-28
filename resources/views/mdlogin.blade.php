@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form method="POST" action="{{ route('login') }}">
+<form class="bg-gray-300 w-70 p-6 m-3 align-content:center justify-content:center" method="POST" action="{{ route('login') }}">
     @csrf
 
     <!-- Email Address -->
@@ -32,7 +32,7 @@
 
     <div class="flex items-center justify-end mt-4">
         @if (Route::has('password.request'))
-            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="/mdforgot-password">
+            <a class="text-sm text-gray-600 hover:text-gray-900" href="/mdforgot-password">
                 {{ __('Forgot your password?') }}
             </a>
         @endif

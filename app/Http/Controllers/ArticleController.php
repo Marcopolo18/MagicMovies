@@ -59,6 +59,8 @@ class ArticleController extends Controller
         // Search in the title and body columns from the posts table
         $results = Article::query()
             ->where('title', 'LIKE', "%{$search}%")
+            ->orWhere('category', 'LIKE', "%{$search}%")
+            ->orWhere('author', 'LIKE', "%{$search}%")
             ->orWhere('content', 'LIKE', "%{$search}%")
             ->get();
 

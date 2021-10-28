@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 
-<div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg" id="container">
+<div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg align-content:center justify-content:center" id="container">
     <h1>&bull; Keep in Touch &bull;</h1>
     <div class="underline">
     </div>
@@ -37,7 +37,7 @@
         <label for="message"></label>
         <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
       </div>
-      <div id="formBtn">
+      <div class="flex">
         <input type="submit" value="Send Message" id="form_button" />
       </div>
     </form><!-- // End form -->

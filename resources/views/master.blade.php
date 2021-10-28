@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="bg-gray-900">   
+<body class="bg-black">   
     <a name="top"></a>   
 
     <div id="navimage">
@@ -74,7 +74,7 @@
             <li class="flex p-0 ml-9">  
                 <form class="place-self-center" id="search" action="{{ route('search') }}" method="GET">
                    
-                    <input  id="caret" type="text" name="search" required/>                    
+                    <input id="caret" type="text" name="search" required/>                    
                     <button id="searchbtn" type="submit">Search</button>
                                 
                 </form>
