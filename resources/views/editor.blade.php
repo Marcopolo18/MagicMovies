@@ -7,7 +7,7 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-gray-300 border-b border-gray-200">
-                You're logged in!
+                {{-- You're logged in! --}}
                 <form action="/newpost" method="post" enctype="multipart/form-data">               
 
                     <input class="inputs" type="text" name="category" placeholder="Category" autocomplete="off">

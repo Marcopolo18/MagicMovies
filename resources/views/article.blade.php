@@ -14,11 +14,20 @@
                         </div>
 
                         <div class="postText">
-                            <b><h3>{{$article->title}}</h3></b>                        
+                            <b><h3>{{$article->title}}</h3></b>                       
                             <b>Created {{$article->created_at->diffForHumans()}}
                             by {{$article->author}}</b><br><br>
                             {{$article->content}}<br><br>
                             <b>Category: {{$article->category}}</b><br>
+                        </div><br><br><hr>
+
+                        <div class="flex-inline" id="comms"> 
+                            <h4>Comments:</h4>                           
+                            @comments ([
+                                'model' => $article,
+                                'approved' => true,                                
+                                'perPage' => 5
+                            ])
                         </div>
                         
 
