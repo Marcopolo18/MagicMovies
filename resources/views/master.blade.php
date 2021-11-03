@@ -27,9 +27,18 @@
     <div id="navimage">
     </div>        
     
-    <nav class="flex justify-between" id="navbar">                          
+    <nav class="flex justify-between" id="navbar">  
+        
+       
+
         <ul class="flex" id="menu"> 
-                                            
+
+            <a class="place-self-center" href="/welcome">
+                <div class="logo-image">
+                      <img src="/images/logored.png" width="200" class="img-fluid">
+                </div>
+            </a>                
+            
             <li class="flex"><a class="place-self-center" href="/welcome">Home</a></li>
             @auth
             <li class="flex" ><a class="place-self-center" href="/subs">Submit</a></li>                

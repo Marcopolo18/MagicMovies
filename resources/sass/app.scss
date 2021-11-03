@@ -26,9 +26,14 @@ h3 {
     padding-left: 0;
 }
 
-h2,
 h4 {
     padding-left: 2vw;
+}
+
+h2 {
+    padding-left: 5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 //header image
@@ -41,6 +46,19 @@ h4 {
 }
 
 //navbar
+
+.logo-image {
+    // width: 30vw;
+    height: fit-content;
+    // border-radius: 7%;
+    overflow: hidden;
+    margin-right: 15vw;
+    border: goldenrod outset 0.2vw;
+    justify-content: center;
+    align-content: center;
+    border-radius: 30px;
+    margin-top: -1vh;
+}
 
 #menu {
     display: flex;
@@ -63,6 +81,7 @@ h4 {
 #search {
     background-color: rgba(245, 245, 245, 0.534);
     color: black;
+    // margin-left: 10vw;
 }
 
 #searchbtn {
@@ -172,7 +191,7 @@ h4 {
 #wrapper {
     min-height: 50vh;
     color: black;
-    background-color: rgba(163, 158, 158, 0.664);
+    background-color: rgb(107, 31, 49);
     border-radius: 30px;
     width: 76vw;
     //display: flex;
@@ -198,12 +217,18 @@ h4 {
     height: fit-content;
     padding-top: 1vh;
     padding-bottom: 1vh;
+    margin-top: 4vh;
 }
 
 #comms {
     margin-left: auto;
     margin-right: auto;
     max-width: 50vw;
+}
+
+.media-body {
+    background-color: rgba(163, 158, 158, 0.616);
+    border: solid 0.1vw #474544;
 }
 
 .media-body,
@@ -499,8 +524,8 @@ textarea {
 //footer
 .footer-basic {
     padding: 2vh;
-    background-color: rgb(95, 27, 42);
-    border: gold outset 0.2vw;
+    background-color: rgb(107, 31, 49);
+    border: goldenrod outset 0.2vw;
     color: whitesmoke;
     bottom: 0;
     width: 100vw;

@@ -48,7 +48,7 @@
                     'comment' => $comment,
                     'grouped_comments' => $grouped_comments,
                     'maxIndentationLevel' => $maxIndentationLevel ?? 3
-                ])
+                ])<br>
             @endforeach
         @endif
     @endforeach

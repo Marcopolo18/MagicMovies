@@ -28,9 +28,14 @@ h3 {
   padding-left: 0;
 }
 
-h2,
 h4 {
   padding-left: 2vw;
+}
+
+h2 {
+  padding-left: 5vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 #navimage {
@@ -39,6 +44,19 @@ h4 {
   background-size: 100vw;
   height: 9vw;
   display: flex;
+}
+
+.logo-image {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  margin-right: 15vw;
+  border: goldenrod outset 0.2vw;
+  justify-content: center;
+  align-content: center;
+  border-radius: 30px;
+  margin-top: -1vh;
 }
 
 #menu {
@@ -191,7 +209,7 @@ h4 {
 #wrapper {
   min-height: 50vh;
   color: black;
-  background-color: rgba(163, 158, 158, 0.664);
+  background-color: #6b1f31;
   border-radius: 30px;
   width: 76vw;
   justify-content: center;
@@ -215,12 +233,18 @@ h4 {
   height: fit-content;
   padding-top: 1vh;
   padding-bottom: 1vh;
+  margin-top: 4vh;
 }
 
 #comms {
   margin-left: auto;
   margin-right: auto;
   max-width: 50vw;
+}
+
+.media-body {
+  background-color: rgba(163, 158, 158, 0.616);
+  border: solid 0.1vw #474544;
 }
 
 .media-body,
@@ -497,8 +521,8 @@ textarea {
 }
 .footer-basic {
   padding: 2vh;
-  background-color: #5f1b2a;
-  border: gold outset 0.2vw;
+  background-color: #6b1f31;
+  border: goldenrod outset 0.2vw;
   color: whitesmoke;
   bottom: 0;
   width: 100vw;

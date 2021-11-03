@@ -17,7 +17,7 @@
                     <input class="inputs" type="file" name="image" placeholder="Image" autocomplete="off"><br>
 
                     @csrf
-                    <button id="newpost" class="inline-flex disabled items-center px-4 py-2 mx-2 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Submit</button>
+                    <button id="newpost" class="inline-flex disabled items-center px-4 py-2 mx-1 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -50,7 +50,7 @@
                             <form action="/post/{{$article->id}}" method="post">
                             @csrf
                             @method('delete')
-                            <button id="showpost" class="inline-flex disabled items-center px-4 py-2 mx-2 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
+                            <button id="showpost" class="inline-flex disabled items-center px-4 py-2 mx-5 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
                             </form>
                         </li>
                         @endauth                        
@@ -91,7 +91,7 @@
                                 <form action="/subs/{{$sub->id}}" method="post">
                                     @csrf
                                     @method('delete')
-                                    <button id="showsubs" class="inline-flex disabled items-center px-4 py-2 mx-2 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
+                                    <button id="showsubs" class="inline-flex disabled items-center px-4 py-2 mx-5 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
                                 </form>
                             </li>
                             @endauth                        
@@ -128,7 +128,7 @@ function checkFields () {
         }
     });
 
-    if (countFields =< 4) {                 // If counter reaches 4 display button
+    if (countFields == 4) {                 // If counter reaches 4 display button
         newpost.style.display = "block"
     } else {                                // If counter is NOT 5 then button doesnt appear
         newpost.style.display = "none"
