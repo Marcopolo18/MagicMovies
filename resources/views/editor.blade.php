@@ -40,7 +40,7 @@
                                 <img src="/images/{{ $article->file_path }}" class="w-40">                                
                             </div>
                             <div class="postText">
-                                <b><h3><a href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>
+                                <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>
                                 <b>Created {{$article->created_at->diffForHumans()}}
                                 by {{$article->author}}</b><br><br>
                                 {{$article->content}}<br><br>
@@ -64,6 +64,8 @@
     </div>
 </div>
 
+
+
 <div class="py-12">
     <h2>Review/delete subs: </h2>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -80,11 +82,11 @@
                                     <img src="/images/{{ $sub->file_path }}" class="w-40">                                
                                 </div>
                                 <div class="postText">
-                                    <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>             
-                                    <b>Created {{$article->created_at->diffForHumans()}}
-                                    by {{$article->author}}</b><br><br>
-                                    {{$article->content}}<br><br>
-                                    <b>Category: {{$article->category}}</b><br>
+                                    <b><h3><a id="link" href="/article/{{$sub->id}}">{{$sub->title}}</a></h3></b>             
+                                    <b>Created {{$sub->created_at->diffForHumans()}}
+                                    by {{$sub->author}}</b><br><br>
+                                    {{$sub->content}}<br><br>
+                                    <b>Category: {{$sub->category}}</b><br>
                                 </div>
                             @auth
                        

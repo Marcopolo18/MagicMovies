@@ -34,7 +34,6 @@ h4 {
 
 h2 {
   padding-left: 5vw;
-  padding-top: 2vh;
   padding-bottom: 2vh;
 }
 
@@ -51,12 +50,42 @@ h2 {
   height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
-  margin-right: 15vw;
+  margin-right: 5vw;
   border: goldenrod outset 0.2vw;
   justify-content: center;
   align-content: center;
   border-radius: 30px;
-  margin-top: -1vh;
+  margin-top: -2.5vh;
+}
+@media only screen and (max-width: 1700px) {
+  .logo-image {
+    margin-right: 2vw;
+    margin-top: -1vh;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .logo-image {
+    margin-right: 2vw;
+    margin-top: -0.5vh;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .logo-image {
+    margin-right: 2vw;
+    margin-top: 0vh;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .logo-image {
+    margin-right: 2vw;
+    margin-top: 0vh;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .logo-image {
+    margin-right: 1vw;
+    margin-top: 0vh;
+  }
 }
 
 #menu {
@@ -69,6 +98,11 @@ h2 {
   height: fit-content;
   list-style: none;
   padding: 2vh;
+}
+@media only screen and (max-width: 767px) {
+  #menu {
+    display: none;
+  }
 }
 
 #caret {
@@ -85,6 +119,35 @@ h2 {
 
 #searchbtn {
   color: black;
+}
+
+.mobile-menu li {
+  background-color: gray;
+  border: solid 0.2vw #474544;
+}
+
+.mobile-menu a {
+  color: whitesmoke;
+}
+.mobile-menu a:hover {
+  color: black;
+}
+
+#searchmob {
+  color: whitesmoke !important;
+  width: 5vw;
+  padding-left: 0;
+}
+
+#searchbtnmob {
+  color: whitesmoke;
+}
+
+#caretmob {
+  color: whitesmoke;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .postText {

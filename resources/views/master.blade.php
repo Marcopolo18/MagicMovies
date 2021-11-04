@@ -27,24 +27,98 @@
     <div id="navimage">
     </div>        
     
-    <nav class="flex justify-between" id="navbar">  
+    <div class="hidden md:flex items-center space-x-1" id="menu">
+        <nav sail down>           
         
-       
 
-        <ul class="flex" id="menu"> 
+            <ul class="flex" id="menu"> 
 
-            <a class="place-self-center" href="/welcome">
-                <div class="logo-image">
-                      <img src="/images/logored.png" width="200" class="img-fluid">
-                </div>
-            </a>                
+                <a class="place-self-center" href="/welcome">
+                    <div class="logo-image">
+                        <img src="/images/logored.png" width="250px" class="img-fluid">
+                    </div>
+                </a>                
+                
+                <li class="flex"><a class="place-self-center" href="/welcome">Home</a></li>
+                @auth
+                <li class="flex" ><a class="place-self-center" href="/subs">Submit</a></li>                
+                <li class="flex"><a class="place-self-center" href="/editor">Editor</a></li> 
+                @endauth 
+                <li class="flex"><a class="place-self-center" href="/contact">Contact</a></li>  
+                    
+                    @if (Route::has('login'))
+                        @auth
+                        {{-- <li>
+                            <a href="{{ url('/') }}"></a>
+                        </li> --}}
+                    @else
+                        
+                    <li class="flex"><a class="place-self-center" href="/mdlogin">Login</a></li>
+                        
+
+                        @if (Route::has('register'))
+                        <li class="flex">
+                            <a class="place-self-center" href="/mdregister" id="register">Register</a>
+                        </li>
+                        @endif
+                        @endauth                         
+                    @endif               
+                    
+                        {{-- @hasrole('admin|editor|manager')
+                        <a href="https://google.com/%22%3E Create a new Blogo  </a>
+                        @endhasrole --}}
+                @auth        
+                <!-- Authentication -->
+                <form class="p-0 m-0 flex-inline" id="logout" method="POST" action="{{ route('logout') }}">
+                    <li class="flex">
+                        @csrf
+                        <a class="place-self-center" href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </a>
+                    </li>
+                </form>                                    
+                @endauth 
+                <li class="flex p-0 ml-9">  
+                    <form class="place-self-center" id="search" action="{{ route('search') }}" method="GET">
+                    
+                        <input id="caret" type="text" name="search" required/>                    
+                        <button id="searchbtn" type="submit">Search</button>
+                                    
+                    </form>
+                </li>                                              
+            </ul>    
             
-            <li class="flex"><a class="place-self-center" href="/welcome">Home</a></li>
+        </nav> 
+    </div>      
+
+    {{-- dropdown --}}
+    <div class="md:hidden flex items-center">
+        <button class="outline-none mobile-menu-button">
+            <svg
+                class="w-8 h-8 text-gray-500"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div class="hidden mobile-menu">
+        <ul class="">
+            <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/welcome">Home</a></li>
             @auth
-            <li class="flex" ><a class="place-self-center" href="/subs">Submit</a></li>                
-            <li class="flex"><a class="place-self-center" href="/editor">Editor</a></li> 
+            <li class="flex" ><a class="block text-base px-2 py-4 transition duration-300" href="/subs">Submit</a></li>                
+            <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/editor">Editor</a></li> 
             @endauth 
-            <li class="flex"><a class="place-self-center" href="/contact">Contact</a></li>  
+            <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/contact">Contact</a></li>  
                 
                 @if (Route::has('login'))
                     @auth
@@ -53,11 +127,11 @@
                     </li> --}}
                 @else
                     
-                <li class="flex"><a class="place-self-center" href="/mdlogin">Login</a></li>
+                <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/mdlogin">Login</a></li>
                     
 
                     @if (Route::has('register'))
-                    <li class="flex">
+                    <li class="block text-base px-2 py-4 transition duration-300">
                         <a class="place-self-center" href="/mdregister">Register</a>
                     </li>
                     @endif
@@ -69,28 +143,29 @@
                     @endhasrole --}}
             @auth        
             <!-- Authentication -->
-            <form class="p-0 m-0 flex-inline" id="logout" method="POST" action="{{ route('logout') }}">
-                <li class="flex">
-                    @csrf
-                    <a class="place-self-center" href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </a>
-                </li>
-            </form>                                    
-            @endauth 
-            <li class="flex p-0 ml-9">  
-                <form class="place-self-center" id="search" action="{{ route('search') }}" method="GET">
-                   
-                    <input id="caret" type="text" name="search" required/>                    
-                    <button id="searchbtn" type="submit">Search</button>
+            <li class="block text-lg px-2 py-4 transition duration-300">
+                <form method="POST" action="{{ route('logout') }}">
+                    <li class="flex">
+                        @csrf
+                        <a class="place-self-center" href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </a>
+                    </li>
+                </form> 
+            </li>                                     
+            @endauth
+            <li class="block text-lg px-3 py-1 transition duration-300">  
+                <form class="place-self-center" id="searchmob" action="{{ route('search') }}" method="GET">
+                
+                    <input id="caretmob" type="text" name="search" required/>                    
+                    <button id="searchbtnmob" type="submit">Search</button>
                                 
                 </form>
-            </li>                                              
-        </ul>    
-          
-    </nav>   
+            </li>              
+        </ul>
+    </div>
             
     <div class="flex">
         <div id="wrapper">       
@@ -115,6 +190,15 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Grab HTML Elements
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
 
+        // Add Event Listeners
+        btn.addEventListener("click", () => {
+	    menu.classList.toggle("hidden");
+        });
+    </script>
 </body>
 </html>

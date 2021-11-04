@@ -66,6 +66,10 @@ Route::get('/editor', function () {
     return view('editor');
 });
 
+Route::get('/editor', 'Controller@showAll');
+
+Route::get('/editor/{id}', 'Controller@view');
+
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -97,9 +101,9 @@ Route::post('/newpost', [ArticleController::class, 'storeArticle']);
 
 Route::post('/newsub', 'Controller@newsub');
 
-Route::get('/editor', 'Controller@showAll');
 
-Route::get('/editor/{id}', 'Controller@view');
+
+
 
 //why if / is defined as /welcome?
 
