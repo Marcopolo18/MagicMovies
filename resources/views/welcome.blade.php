@@ -8,8 +8,8 @@
             <div class="place-self-center bg-gray-300 border-b border-gray-200">
                 <div id="showposts">
                     <ul>
-                        
-                        @foreach ($articles as $article)                    
+                        {{-- added where try merge md --}}
+                        @foreach ($articles->where('approved', '1') as $article)                    
                     
                             <li class="{{ $article->category }} posted"> 
                                 

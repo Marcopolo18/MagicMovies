@@ -10,7 +10,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\Post;
 use App\Models\Subs;
-
+use phpDocumentor\Reflection\Types\Boolean;
 
 class ArticleController extends Controller
 {
@@ -32,11 +32,11 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->author = $request->author;
         $article->content = $request->content;
+        //md try merge
+        $article->approved = boolval(1);
         $article->file_path = $img_filename;
 
         $article->save();
-
-
 
         //routing
         return back()
@@ -45,7 +45,7 @@ class ArticleController extends Controller
 
     public function allArticles()
     {
-        $articles = Article::latest()->paginate(5);
+        $articles = Article::latest()->where('approved', '1')->paginate(5); //added where merge md
 
         return view('/welcome')->with('articles', $articles);
     }

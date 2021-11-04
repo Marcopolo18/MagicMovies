@@ -35,16 +35,32 @@ class Controller extends BaseController
 
     public function newsub(Request $request)
     {
-        $post = new Subs();
+        //storing action
+        // $img_filename = null;
+        // if ($request->image) {
+        //     $img_filename = time() . '.' . $request->image->extension(); // !
+        //     $request->image->move(public_path('images'), $img_filename); // !
+        // }
+
+        $post = new Article(); //md try merge changed Subs to Article
         $post->category = $request->category;
         $post->title = $request->title;
         $post->author = $request->author;
         $post->content = $request->content;
+        //md try merge add approved line
+        $post->approved = boolval(0);
         $post->file_path = $request->file_path;
 
         $post->save();
 
         return redirect('/welcome');
+
+        // return back()
+        //     ->with('file_path', $img_filename);
+    }
+
+    public function approveSub()
+    {
     }
 
     //attempt at image md
