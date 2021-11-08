@@ -37,7 +37,7 @@
                             <li class="{{ $article->category }} posted">
                             
                             <div class="blogPic">
-                                <img src="/images/{{ $article->file_path }}" class="w-40">                                
+                                <img src="/images/{{ $article->img_filename }}" class="w-40">                                
                             </div>
                             <div class="postText">
                                 <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>
@@ -107,7 +107,7 @@
                             <li class="{{ $article->category }} posted">
                             
                             <div class="blogPic">
-                                <img src="/images/{{ $article->file_path }}" class="w-40">                                
+                                <img src="/images/{{ $article->img_filename }}" class="w-40">                                
                             </div>
                             <div class="postText">
                                 <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>
@@ -126,7 +126,7 @@
 
                                 <form action="/approve/{{$article->id}}" method="post">
                                     @csrf
-                                    @method('approve')
+                                    @method('post')
                                     <button id="showsubs" class="inline-flex disabled items-center px-4 py-2 mx-5 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Approve</button>
                                 </form>
                             </div>

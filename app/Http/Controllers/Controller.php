@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Subs;
 use App\Models\Article;
+use App\Models\Role;
+use App\Models\Permission;
 
 
 
@@ -36,11 +38,11 @@ class Controller extends BaseController
     public function newsub(Request $request)
     {
         //storing action
-        // $img_filename = null;
-        // if ($request->image) {
-        //     $img_filename = time() . '.' . $request->image->extension(); // !
-        //     $request->image->move(public_path('images'), $img_filename); // !
-        // }
+        $img_filename = null;
+        if ($request->image) {
+            $img_filename = time() . '.' . $request->image->extension(); // !
+            $request->image->move(public_path('images'), $img_filename); // !
+        }
 
         $post = new Article(); //md try merge changed Subs to Article
         $post->category = $request->category;
@@ -49,7 +51,7 @@ class Controller extends BaseController
         $post->content = $request->content;
         //md try merge add approved line
         $post->approved = boolval(0);
-        $post->file_path = $request->file_path;
+        $post->img_filename = $img_filename;
 
         $post->save();
 

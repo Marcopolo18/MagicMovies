@@ -104,6 +104,9 @@ Route::post('/newpost', [ArticleController::class, 'storeArticle']);
 
 Route::post('/newsub', 'Controller@newsub');
 
+//md try approve
+Route::post('/approve/{id}', 'ArticleController@approveArticle');
+
 
 
 

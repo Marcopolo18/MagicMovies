@@ -20,7 +20,7 @@ class Article extends Migration
             $table->string('author');
             $table->string('content');
             $table->boolean('approved')->default(0); //md merge
-            $table->string('file_path')->nullable();
+            $table->string('img_filename')->nullable();
             $table->timestamps();
         });
     }

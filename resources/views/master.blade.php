@@ -180,7 +180,7 @@
             <ul class="list-inline flex justify-between">
                 <li class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></li>                     
                 <li class="copyright">MagicMovies © 2018</li>
-                <li class="topPage"><a href="#top">Back to top of page</a></li>             
+                <li class="topPage"><a href="#top">Back to top</a></li>             
             </ul>           
             
         </footer>             

@@ -10,7 +10,7 @@
                     <li class="{{ $article->category }} color-gray-900 posted"> 
                     {{-- attempt image md                               --}}
                         <div class="blogPic">
-                            <img src="/images/{{ $article->file_path }}" class="w-100">                                
+                            <img src="/images/{{ $article->img_filename }}" class="w-100">                                
                         </div>
 
                         <div class="postText">

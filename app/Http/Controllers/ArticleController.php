@@ -10,6 +10,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\Post;
 use App\Models\Subs;
+use App\Models\Role;
+use App\Models\Permission;
 use phpDocumentor\Reflection\Types\Boolean;
 
 class ArticleController extends Controller
@@ -34,7 +36,7 @@ class ArticleController extends Controller
         $article->content = $request->content;
         //md try merge
         $article->approved = boolval(1);
-        $article->file_path = $img_filename;
+        $article->img_filename = $img_filename;
 
         $article->save();
 
@@ -49,6 +51,27 @@ class ArticleController extends Controller
 
         return view('/welcome')->with('articles', $articles);
     }
+
+    // public function approveArticle(Request $request, article_id)
+    // {
+    //     $articleToApprove = Article::(article.id=article_id)
+
+    //     $articleToApprove->approved = boolval(1);
+    //     $articleToApprove->save();
+    // }
+
+    //md try approved
+    public function approveArticle($id)
+    {
+        $approveArticle = Article::findOrFail($id);
+
+        $approveArticle->approved = boolval(1);
+
+        $approveArticle->save();
+
+        return redirect('/editor');
+    }
+
 
     //attempt at search bar    
     public function search(Request $request)
