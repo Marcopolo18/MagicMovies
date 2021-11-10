@@ -47,7 +47,7 @@ class ArticleController extends Controller
 
     public function allArticles()
     {
-        $articles = Article::latest()->where('approved', '1')->paginate(5); //added where merge md
+        $articles = Article::latest()->where('approved', '1')->paginate(10); //added where merge md
 
         return view('/welcome')->with('articles', $articles);
     }

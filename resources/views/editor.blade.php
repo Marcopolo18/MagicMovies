@@ -37,13 +37,13 @@
                             <li class="{{ $article->category }} posted">
                             
                             <div class="blogPic">
-                                <img src="/images/{{ $article->img_filename }}" class="w-40">                                
+                                <img src="/images/{{ $article->img_filename }}" class="w-80">                                
                             </div>
                             <div class="postText">
                                 <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>
                                 <b>Created {{$article->created_at->diffForHumans()}}
                                 by {{$article->author}}</b><br><br>
-                                {{$article->content}}<br><br>
+                                {{Str::limit($article->content, 200)}}<br><br>
                                 <b>Category: {{$article->category}}</b><br>
                             </div>
                         @auth

@@ -125,7 +125,6 @@ h2 {
   background-color: gray;
   border: solid 0.2vw #474544;
 }
-
 .mobile-menu a {
   color: whitesmoke;
 }
@@ -133,14 +132,19 @@ h2 {
   color: black;
 }
 
+#mobMenuLi {
+  justify-content: center;
+}
+
 #searchmob {
   color: whitesmoke !important;
   width: 5vw;
-  padding-left: 0;
+  justify-content: center;
 }
 
 #searchbtnmob {
   color: whitesmoke;
+  justify-content: center;
 }
 
 #caretmob {
@@ -150,9 +154,33 @@ h2 {
   width: fit-content;
 }
 
+#showposts {
+  margin: 0.5vw;
+}
+@media only screen and (max-width: 767px) {
+  #showposts {
+    margin: 0;
+  }
+}
+
 .postText {
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  padding-bottom: 2vh;
+}
+
+#postBox {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 0.1vw #4745449a;
+}
+@media only screen and (max-width: 767px) {
+  #postBox {
+    border: none;
+    border-top: solid 0.1vw #4745449a;
+  }
 }
 
 #newsub,

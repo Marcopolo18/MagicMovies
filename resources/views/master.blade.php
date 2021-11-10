@@ -112,13 +112,13 @@
     </div>
 
     <div class="hidden mobile-menu">
-        <ul class="">
-            <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/welcome">Home</a></li>
+        <ul class="block">
+            <a class="flex" id="mobMenuLi" href="/welcome"><li class="block text-base px-2 py-4 transition duration-300">Home</a></li>
             @auth
-            <li class="flex" ><a class="block text-base px-2 py-4 transition duration-300" href="/subs">Submit</a></li>                
-            <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/editor">Editor</a></li> 
+            <a class="flex" id="mobMenuLi" href="/subs" ><li class="block text-base px-2 py-4 transition duration-300">Submit</a></li>                
+            <a class="flex" id="mobMenuLi" href="/editor"><li class="block text-base px-2 py-4 transition duration-300">Editor</a></li> 
             @endauth 
-            <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/contact">Contact</a></li>  
+            <a class="flex" id="mobMenuLi" href="/contact"><li class="block text-base px-2 py-4 transition duration-300">Contact</a></li>  
                 
                 @if (Route::has('login'))
                     @auth
@@ -127,12 +127,12 @@
                     </li> --}}
                 @else
                     
-                <li class="flex"><a class="block text-base px-2 py-4 transition duration-300" href="/mdlogin">Login</a></li>
+                <a class="flex" id="mobMenuLi" href="/mdlogin"><li class="block text-base px-2 py-4 transition duration-300">Login</a></li>
                     
 
                     @if (Route::has('register'))
-                    <li class="block text-base px-2 py-4 transition duration-300">
-                        <a class="place-self-center" href="/mdregister">Register</a>
+                    <a class="block text-base px-2 py-4 transition duration-300" href="/mdregister">
+                        <li class="place-self-center">Register</a>
                     </li>
                     @endif
                     @endauth                         
@@ -145,9 +145,9 @@
             <!-- Authentication -->
             <li class="block text-lg px-2 py-4 transition duration-300">
                 <form method="POST" action="{{ route('logout') }}">
-                    <li class="flex">
+                    <a class="flex" id="mobMenuLi" href="route('logout')">
                         @csrf
-                        <a class="place-self-center" href="route('logout')"
+                        <li class="place-self-center"
                                 onclick="event.preventDefault();
                                             this.closest('form').submit();">
                             {{ __('Log Out') }}

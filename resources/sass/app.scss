@@ -115,36 +115,69 @@ h2 {
     color: black;
 }
 
-.mobile-menu li {
-    background-color: gray;
-    border: solid 0.2vw #474544;
+.mobile-menu {
+    li {
+        background-color: gray;
+        border: solid 0.2vw #474544;
+    }
+
+    a {
+        color: whitesmoke;
+
+        &:hover {
+            color: black;
+        }
+    }
 }
 
-.mobile-menu a {
-    color: whitesmoke;
-
-    &:hover {
-        color: black;
-    }
+#mobMenuLi {
+    justify-content: center;
 }
 
 #searchmob {
     color: whitesmoke !important;
     width: 5vw;
-    padding-left: 0;
+    // padding-left: 0;
+    justify-content: center;
 }
 
 #searchbtnmob {
     color: whitesmoke;
+    justify-content: center;
 }
+
 #caretmob {
     color: whitesmoke;
     width: fit-content;
 }
 
+#showposts {
+    margin: 0.5vw;
+    @media only screen and (max-width: 767px) {
+        margin: 0;
+    }
+}
+
 .postText {
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-bottom: 2vh;
+}
+
+#postBox {
+    // justify-content: center;
+    // align-content: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 0.1vw #4745449a;
+    @media only screen and (max-width: 767px) {
+        border: none;
+        border-top: solid 0.1vw #4745449a;
+    }
+    // padding-bottom: 2vh;
+    // padding-top: 2vh;
 }
 
 #newsub,
