@@ -131,8 +131,8 @@
                     
 
                     @if (Route::has('register'))
-                    <a class="block text-base px-2 py-4 transition duration-300" href="/mdregister">
-                        <li class="place-self-center">Register</a>
+                    <a class="flex" id="mobMenuLi" href="/mdregister">
+                        <li class="block text-base px-2 py-4 transition duration-300">Register</a>
                     </li>
                     @endif
                     @endauth                         

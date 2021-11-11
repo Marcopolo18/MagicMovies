@@ -40,7 +40,7 @@
                         @endif
 
                         
-                        <div class="block sm:3/3 md:3/3 lg:w-1/3 xl:1/3 pt-4" id="postBox">
+                        <div class="block sm:3/3 md:3/3 lg:w-1/3 xl:1/3 pt-4 m-2" id="postBox">
                             <div class="blogPic">
                                 <img src="/images/{{ $article->img_filename }}">                                
                             </div>
@@ -52,11 +52,11 @@
                                 <b>Category: {{$article->category}}</b><br>
                             </div>
     
-                            @auth
+                            @auth                            
                             <form action="/post/{{$article->id}}" method="post">
                             @csrf
                             @method('delete')
-                            <button id="showpost" class="inline-flex disabled items-center px-4 py-2 mx-5 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
+                            <button id="showpost" class="inline-flex disabled items-center px-2 py-2 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
                             </form>
                             @endauth 
                         </div>
