@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Subs;
+use App\Models\User;
 use App\Models\Article;
 use App\Models\Role;
 use App\Models\Permission;
@@ -21,6 +22,12 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    //attempt at user role with anita..define editor
+    public function hack()
+    {
+        $user = User::findOrFail(1);
+        $user->assignRole('editor');
+    }
     // public function newpost(Request $request)
     // {
     //     $article = new Article();
@@ -37,6 +44,7 @@ class Controller extends BaseController
 
     public function newsub(Request $request)
     {
+
         //storing action
         $img_filename = null;
         if ($request->image) {

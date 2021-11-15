@@ -26,6 +26,7 @@ html {
 h3 {
   padding-top: 2vh;
   padding-left: 0;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -35,6 +36,7 @@ h4 {
 h2 {
   padding-left: 5vw;
   padding-bottom: 2vh;
+  color: whitesmoke !important;
 }
 
 #navimage {
@@ -262,7 +264,7 @@ h2 {
   background-color: rgba(18, 11, 36, 0.883);
   border: solid 0.2vw #474544;
   border-radius: 7%;
-  color: white;
+  color: whitesmoke;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -299,7 +301,6 @@ h2 {
 
 #wrapper {
   min-height: 50vh;
-  color: black;
   background-color: #6b1f31;
   border-radius: 30px;
   width: 76vw;
@@ -357,7 +358,7 @@ h2 {
   max-width: 70vw;
   margin-left: auto;
   margin-right: auto;
-  border: goldenrod outset 0.3vw;
+  border: goldenrod outset 0.2vw;
 }
 
 html {
@@ -674,6 +675,25 @@ textarea {
   color: #aaa;
   margin-bottom: 0;
   padding-bottom: 1vh;
+}
+
+.pagination {
+  justify-content: right;
+  align-content: center;
+}
+.pagination .page-link,
+.pagination span.page-link,
+.pagination a.page-link,
+.pagination li.page-item.disabled,
+.pagination .page-item.disabled {
+  background-color: #6b1f31;
+  color: whitesmoke;
+  border: goldenrod outset 0.2vw;
+}
+.pagination .page-item.active .page-link {
+  background-color: rgba(245, 245, 245, 0.534);
+  color: black;
+  border: goldenrod outset 0.2vw;
 }
 /*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com */
 

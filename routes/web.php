@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,6 +53,20 @@ Route::delete('/post/{id}', 'Controller@delete');
 
 Route::delete('/subs/{id}', 'Controller@deleteSub');
 
+Route::get('/editor', function () {
+    return view('editor');
+});
+
+Route::get('/editor', 'Controller@showAll');
+
+Route::get('/editor/{id}', 'Controller@view');
+
+//md try approve
+Route::post('/approve/{id}', 'ArticleController@approveArticle');
+
+
+
+
 // Route::get('/post', function () {
 //     return view('post');
 // });
@@ -62,14 +77,6 @@ Route::get('/article/{id}', 'Controller@view');
 Route::get('/article', function () {
     return view('article');
 });
-
-Route::get('/editor', function () {
-    return view('editor');
-});
-
-Route::get('/editor', 'Controller@showAll');
-
-Route::get('/editor/{id}', 'Controller@view');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -103,14 +110,6 @@ Route::post('/newpost', [ArticleController::class, 'storeArticle']);
 // Route::post('/newsub', [Controller::class, 'newsub']); //md merge image attempt
 
 Route::post('/newsub', 'Controller@newsub');
-
-//md try approve
-Route::post('/approve/{id}', 'ArticleController@approveArticle');
-
-
-
-
-
 
 //why if / is defined as /welcome?
 

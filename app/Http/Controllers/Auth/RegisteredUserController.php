@@ -45,6 +45,8 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+        //added md anita roles make default register USER
+        $user->assignRole('user');
 
         event(new Registered($user));
 

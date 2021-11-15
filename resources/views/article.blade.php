@@ -31,7 +31,7 @@
                         </div>
                         
 
-                    @auth
+                    @role('editor')
                     {{-- <li> --}}
                         <form action="/post/{{$article->id}}" method="post">
                         @csrf
@@ -39,15 +39,15 @@
                         <button id="showpost" class="inline-flex disabled items-center px-4 py-2 mx-5 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
                         </form>
                     </li>
-                    @endauth 
+                    @endrole 
                     
                 </ul>  
 
                 <div class="flex">
                     <a class="place-self-center" href="/welcome" id="backBtn">Home</a>
-                    @auth
+                    @role('editor')
                     <a class="place-self-center" href="/editor" id="backBtn">Editor</a>
-                    @endauth
+                    @endrole
                 </div>
             </div>
         </div>

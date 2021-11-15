@@ -40,10 +40,12 @@
                 </a>                
                 
                 <li class="flex"><a class="place-self-center" href="/welcome">Home</a></li>
-                @auth
+                @hasanyrole('user|editor')
                 <li class="flex" ><a class="place-self-center" href="/subs">Submit</a></li>                
+                @endrole
+                @role('editor')
                 <li class="flex"><a class="place-self-center" href="/editor">Editor</a></li> 
-                @endauth 
+                @endrole
                 <li class="flex"><a class="place-self-center" href="/contact">Contact</a></li>  
                     
                     @if (Route::has('login'))
