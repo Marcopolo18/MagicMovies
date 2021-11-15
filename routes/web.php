@@ -20,6 +20,27 @@ use App\Http\Controllers\Controller;
 |
 */
 
+Route::group(['middleware' => ['role:editor']], function () {
+    // Route::get('/editor', function () {
+    //     return view('editor');
+    // });
+
+    Route::get('/editor', 'Controller@showAll');
+
+    // Route::get('/editor/{id}', 'Controller@view');
+
+    //delete function
+    Route::delete('/post/{id}', 'Controller@delete');
+
+    Route::delete('/subs/{id}', 'Controller@deleteSub');
+
+    //md try approve
+    Route::post('/approve/{id}', 'ArticleController@approveArticle');
+
+    Route::post('/newpost', [ArticleController::class, 'storeArticle']);
+});
+
+
 Route::get('/', [ArticleController::class, 'allArticles']);
 
 //try at login page md
@@ -48,25 +69,6 @@ Route::get('/app', function () {
     return view('app');
 });
 
-//delete function
-Route::delete('/post/{id}', 'Controller@delete');
-
-Route::delete('/subs/{id}', 'Controller@deleteSub');
-
-Route::get('/editor', function () {
-    return view('editor');
-});
-
-Route::get('/editor', 'Controller@showAll');
-
-Route::get('/editor/{id}', 'Controller@view');
-
-//md try approve
-Route::post('/approve/{id}', 'ArticleController@approveArticle');
-
-
-
-
 // Route::get('/post', function () {
 //     return view('post');
 // });
@@ -82,13 +84,13 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/master', function () {
-    return view('master');
-});
+// Route::get('/master', function () {
+//     return view('master');
+// });
 
-Route::get('/subs', function () {
-    return view('subs');
-});
+Route::get('/createSub', function () {
+    return view('createSub');
+})->middleware(['auth']);
 
 // Route::get('/', function () {
 //     return Inertia::render('welcome', [
@@ -105,7 +107,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::post('/newpost', [ArticleController::class, 'storeArticle']);
+
 
 // Route::post('/newsub', [Controller::class, 'newsub']); //md merge image attempt
 

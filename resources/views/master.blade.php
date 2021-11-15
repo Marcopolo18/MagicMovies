@@ -33,15 +33,17 @@
 
             <ul class="flex" id="menu"> 
 
-                <a class="place-self-center" href="/welcome">
+
                     <div class="logo-image">
-                        <img src="/images/logored.png" width="250px" class="img-fluid">
+                        <a class="place-self-center" href="/welcome">
+                            <img src="/images/logored.png" width="250px" class="img-fluid">
+                        </a> 
                     </div>
-                </a>                
+                              
                 
                 <li class="flex"><a class="place-self-center" href="/welcome">Home</a></li>
                 @hasanyrole('user|editor')
-                <li class="flex" ><a class="place-self-center" href="/subs">Submit</a></li>                
+                <li class="flex" ><a class="place-self-center" href="/createSub">Submit</a></li>                
                 @endrole
                 @role('editor')
                 <li class="flex"><a class="place-self-center" href="/editor">Editor</a></li> 
@@ -117,7 +119,7 @@
         <ul class="block">
             <a class="flex" id="mobMenuLi" href="/welcome"><li class="block text-base px-2 py-4 transition duration-300">Home</a></li>
             @auth
-            <a class="flex" id="mobMenuLi" href="/subs" ><li class="block text-base px-2 py-4 transition duration-300">Submit</a></li>                
+            <a class="flex" id="mobMenuLi" href="/createSub" ><li class="block text-base px-2 py-4 transition duration-300">Submit</a></li>                
             <a class="flex" id="mobMenuLi" href="/editor"><li class="block text-base px-2 py-4 transition duration-300">Editor</a></li> 
             @endauth 
             <a class="flex" id="mobMenuLi" href="/contact"><li class="block text-base px-2 py-4 transition duration-300">Contact</a></li>  

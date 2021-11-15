@@ -54,10 +54,9 @@ h2 {
   overflow: hidden;
   margin-right: 5vw;
   border: goldenrod outset 0.2vw;
-  justify-content: center;
-  align-content: center;
   border-radius: 30px;
   margin-top: -2.5vh;
+  transition: 0.4s;
 }
 @media only screen and (max-width: 1700px) {
   .logo-image {
@@ -90,6 +89,10 @@ h2 {
   }
 }
 
+.logo-image:hover {
+  box-shadow: #cc9f23 -5px -5px 50px;
+}
+
 #menu {
   display: flex;
   justify-content: center;
@@ -115,8 +118,9 @@ h2 {
 }
 
 #search {
-  background-color: rgba(245, 245, 245, 0.534);
+  background-color: lightgray;
   color: black;
+  transition: 0.1s;
 }
 
 #searchbtn {
@@ -294,14 +298,16 @@ h2 {
 #link {
   color: black;
   text-decoration: underline;
+  transition: 0.1s;
 }
 #link:hover {
-  color: blue;
+  color: goldenrod;
 }
 
 #wrapper {
   min-height: 50vh;
   background-color: #6b1f31;
+  border: goldenrod outset 0.2vw;
   border-radius: 30px;
   width: 76vw;
   justify-content: center;
@@ -614,7 +620,7 @@ textarea {
 .footer-basic {
   padding: 2vh;
   background-color: #6b1f31;
-  border: goldenrod outset 0.2vw;
+  border-top: goldenrod outset 0.2vw;
   color: whitesmoke;
   bottom: 0;
   width: 100vw;
