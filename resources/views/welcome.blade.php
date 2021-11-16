@@ -67,7 +67,7 @@
                     @endif
                 @endforeach
             </div>            
-            {{ $articles->links() }}
+            <div class="">{{ $articles->links() }}</div>
         </div>
     </div>
 </div>
