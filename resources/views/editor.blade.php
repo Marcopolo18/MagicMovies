@@ -32,7 +32,7 @@
                 <div id="showposts">
                     <ul>
                         {{-- added where merge md --}}
-                        @foreach ($articles->where('approved', '1') as $article)                    
+                        @foreach ($articles->where('approved', '1') as $article)                   
                     
                             <li class="{{ $article->category }} posted">
                             
@@ -43,17 +43,17 @@
                                 <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>
                                 <b>Created {{$article->created_at->diffForHumans()}}
                                 by {{$article->author}}</b><br><br>
-                                {{Str::limit($article->content, 200)}}<br><br>
+                                {{Str::limit($article->content, 100)}}<br><br>
                                 <b>Category: {{$article->category}}</b><br>
                             </div>
-                        @auth
+                        @role('editor')
                             <form action="/post/{{$article->id}}" method="post">
                             @csrf
                             @method('delete')
                             <button id="showpost" class="inline-flex disabled items-center px-4 py-2 mx-5 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
                             </form>
                         </li>
-                        @endauth                        
+                        @endrole                        
                         @endforeach
                     </ul>
 

@@ -69,7 +69,7 @@ class ArticleController extends Controller
 
         $approveArticle->save();
 
-        return redirect('/editor');
+        return back();
     }
 
 

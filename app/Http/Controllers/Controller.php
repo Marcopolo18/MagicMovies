@@ -124,7 +124,7 @@ class Controller extends BaseController
     public function delete($id)
     {
         $result = Article::findOrFail($id)->delete();
-        return back();
+        return redirect('welcome');
     }
 
     public function deleteSub($id)

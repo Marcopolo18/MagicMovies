@@ -41,10 +41,30 @@ h2 {
 
 #navimage {
   background-image: url(/images/reelmoments.png?d20fb50ad63bde734a18b7d541d180d3);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-size: 100vw;
   height: 9vw;
   display: flex;
+  background-size: 101% 101%;
+  -webkit-animation: Move 120s linear infinite;
+          animation: Move 120s linear infinite;
+  animation-direction: reverse;
+}
+@-webkit-keyframes Move {
+  from {
+    background-position: 10000% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes Move {
+  from {
+    background-position: 10000% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 
 .logo-image {
@@ -53,7 +73,7 @@ h2 {
   height: fit-content;
   overflow: hidden;
   margin-right: 5vw;
-  border: goldenrod outset 0.2vw;
+  border: goldenrod outset 0.25vw;
   border-radius: 30px;
   margin-top: -2.5vh;
   transition: 0.4s;
@@ -307,7 +327,7 @@ h2 {
 #wrapper {
   min-height: 50vh;
   background-color: #6b1f31;
-  border: goldenrod outset 0.2vw;
+  border: goldenrod outset 0.25vw;
   border-radius: 30px;
   width: 76vw;
   justify-content: center;
@@ -364,7 +384,7 @@ h2 {
   max-width: 70vw;
   margin-left: auto;
   margin-right: auto;
-  border: goldenrod outset 0.2vw;
+  border: goldenrod outset 0.25vw;
 }
 
 html {
