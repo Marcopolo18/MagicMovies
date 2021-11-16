@@ -28,17 +28,18 @@
         <label for="subject"></label>
         <select placeholder="Subject line" name="subject" id="subject_input" required>
           <option disabled hidden selected>Subject line</option>
-          <option>I'd like to start a project</option>
-          <option>I'd like to ask a question</option>
+          <option>I have a question</option>
+          <option>I want to contribute</option>
           <option>I'd like to make a proposal</option>
+          <option>I love your work</option>
         </select>
       </div>
       <div class="message">
         <label for="message"></label>
-        <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+        <textarea name="message" placeholder="Please type your message here." id="message_input" cols="30" rows="5" required></textarea>
       </div>
       <div class="flex">
-        <input type="submit" value="Send Message" id="form_button" />
+        <input type="submit" value="Send Message" id="form_button"/>
       </div>
     </form><!-- // End form -->
   </div><!-- // End #container -->

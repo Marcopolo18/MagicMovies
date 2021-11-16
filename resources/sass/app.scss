@@ -632,6 +632,7 @@ textarea {
     width: 100vw;
     position: fixed;
     height: fit-content;
+    z-index: 3;
 }
 
 .footer-basic ul {
@@ -706,7 +707,7 @@ textarea {
     }
 
     .page-item.active .page-link {
-        background-color: rgba(245, 245, 245, 0.534);
+        background-color: rgba(245, 245, 245, 0.623);
         color: black;
         border: goldenrod outset 0.2vw;
     }
