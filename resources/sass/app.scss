@@ -47,7 +47,7 @@ h2 {
     display: flex;
     //slide md trial
     background-size: 101% 101%;
-    animation: Move 120s linear infinite;
+    animation: Move 140s linear infinite;
     animation-direction: reverse;
 
     @keyframes Move {
@@ -431,7 +431,7 @@ textarea {
     max-width: 70vw;
     margin: 3vw auto;
     position: relative;
-    background-color: rgba(211, 211, 211, 0.685);
+    background-color: lightgray;
     padding: 2vh 2vw;
 }
 
@@ -680,12 +680,12 @@ textarea {
     // font-size: 24px;
     width: 4vw;
     height: 4vh;
-    line-height: 4vh;
+    line-height: 3vh;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
     border: 0.1vw solid #ccc;
-    margin: 0 0.8vh;
+    margin: 0 0.1vh;
     color: inherit;
     opacity: 0.75;
 }
@@ -695,12 +695,12 @@ textarea {
 }
 
 .footer-basic .copyright .topPage {
-    margin-top: 1.5vh;
+    // margin-top: 1.5vh;
     text-align: center;
     // font-size: 24px;
     color: #aaa;
-    margin-bottom: 0;
-    padding-bottom: 1vh;
+    // margin-bottom: 0;
+    // padding-bottom: 1vh;
 }
 
 //next page button

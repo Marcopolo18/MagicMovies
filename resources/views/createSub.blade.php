@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="py-12">
-    <h2>Create a new post. We will review it prior to posting to ascertain that it meets our standards: </h2>
+    <h2 class="flex text-4x1">Create a new post. We will review it prior to posting, in order to ascertain that it meets our standards: </h2>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-gray-300 border-b border-gray-200">
@@ -12,7 +12,7 @@
                     <input class="inputs" type="text" name="title" placeholder="Title" autocomplete="off"><br>
                     <input class="inputs" type="text" name="author" placeholder="Author" autocomplete="off">
                     <input class="inputs" type="text" name="content" placeholder="Content" autocomplete="off"><br>
-                    <input class="inputs" type="file" name="image" placeholder="Image" autocomplete="off"><br>
+                    <input class="inputs w-11/12 sm:w-11/12 lg:w-100% xl: w-100%" type="file" name="image" placeholder="Image" autocomplete="off"><br>
                     
                     @csrf
                     <button id="newsub" class="inline-flex disabled items-center px-4 py-2 mx-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Submit</button>
