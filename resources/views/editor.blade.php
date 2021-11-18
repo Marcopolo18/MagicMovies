@@ -2,6 +2,7 @@
 {{-- @section('title', 'Message List') --}}
 @section('content')
 
+
 <div class="py-12">
     <h2 class="text-4x1">Create new post: </h2>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -72,34 +73,6 @@
         <div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-gray-300 border-b border-gray-200">
                 <div class="flex" id="showSubs">
-                    {{-- <ul>
-                        {{-- changed $subs to $articles merge md added where --}}
-                        {{-- @foreach ($articles->where('approved', '0') as $sub)                    
-                        
-                            <li class="{{ $sub->category }} posted place-self-center">
-                            
-                                <div class="blogPic">
-                                    <img src="/images/{{ $article->file_path }}" class="w-40">                                
-                                </div>
-                                <div class="postText">
-                                    <b><h3><a id="link" href="/article/{{$sub->id}}">{{$sub->title}}</a></h3></b>             
-                                    <b>Created {{$sub->created_at->diffForHumans()}}
-                                    by {{$sub->author}}</b><br><br>
-                                    {{$sub->content}}<br><br>
-                                    <b>Category: {{$sub->category}}</b><br>
-                                </div>
-                            @auth
-                       
-                                <form action="/post/{{$sub->id}}" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <button id="showsubs" class="inline-flex disabled items-center px-4 py-2 mx-5 bg-gray-800 font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" type="submit">Delete</button>
-                                </form>
-                            </li>
-                            @endauth                        
-                        @endforeach
-                    </ul> 
-                    --}}
                     <ul>
                         {{-- added where merge md --}}
                         @foreach ($articles->where('approved', '0') as $article)                    
@@ -135,12 +108,12 @@
                         @endforeach
                     </ul>
 
-                </div>
-                
+                </div>                
             </div>
         </div>
     </div>
 </div>
+
 
 <script>
 
@@ -172,7 +145,6 @@ function checkFields () {
     }
 
 }
-
 
 </script>
 

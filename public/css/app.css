@@ -340,6 +340,49 @@ h2 {
   padding-bottom: 4vh;
 }
 
+#recom {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 2vw;
+  display: flex;
+  align-items: center;
+}
+#recom #recomRow {
+  border: solid 0.1vw #474544;
+  margin-bottom: 1vh;
+  padding: 1vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+@media only screen and (max-width: 767px) {
+  #recom #recomRow {
+    border: none;
+    border-top: solid 0.1vw #4745449a;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+#recom #recomRow iframe {
+  border: goldenrod outset 0.25vw;
+}
+
+@media only screen and (max-width: 450px) {
+  #recom {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  }
+  #recom iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
 #soloArt,
 #showSubs {
   margin: 1vw 4vh;

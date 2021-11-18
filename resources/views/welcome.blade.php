@@ -5,7 +5,31 @@
     {{-- <h2>View posts: </h2> --}}
 <div class="max-w-7xlmx-auto sm:px-6 lg:px-8">
     <div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
-        <div class="place-self-center bg-gray-300 border-b border-gray-200">
+        <div class="place-self-center bg-gray-300 border-b border-gray-200"> 
+            <div class="flex flex-wrap flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row w-100% justify-around" id="recom">
+                <div class="" id="recomRow">                     
+                    <iframe src="https://www.youtube.com/embed/BIhNsAtPbPI" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe><br>
+                    <p id="recomTit"><strong>new movie trailer</strong></p>
+                </div>
+                <div class="" id="recomRow"> 
+                    <iframe src="https://www.youtube.com/embed/0ke-v0e3Cd4" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe><br>
+                    <p id="recomTit"><strong>new film recommendation</strong></p> 
+                </div>
+                <div class="" id="recomRow"> 
+                    <iframe src="https://www.youtube.com/embed/sS6ksY8xWCY" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe><br>
+                    <p id="recomTit"><strong>new film condemnation</strong></p> 
+                </div>                               
+            </div>  
+            <hr>
             <div class="flex flex-wrap" id="showposts">                                           
                 @foreach ($articles->where('approved', '1') as $article) 
                     @if($loop->first)                                 
@@ -66,8 +90,8 @@
                         </div> <!-- closing row tag-->
                     @endif
                 @endforeach
-            </div>            
-            <div class="">{{ $articles->links() }}</div>
+            </div>                       
+            <div class="">{{ $articles->links() }}</div>            
         </div>
     </div>
 </div>
