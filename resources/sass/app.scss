@@ -58,6 +58,10 @@ h2 {
             background-position: 100% 0;
         }
     }
+
+    @media only screen and (max-width: 600px) {
+        height: 10vh;
+    }
 }
 
 //navbar
@@ -174,6 +178,32 @@ h2 {
 #caretmob {
     color: whitesmoke;
     width: fit-content;
+}
+
+#banner {
+    // height: fit-content;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border: goldenrod solid 0.15vw;
+    // border-radius: 30px;
+    transition: 0.4s;
+    font-size: 2vh;
+    text-align: center;
+    align-content: center;
+    padding: 1.5vh;
+    margin-bottom: 2vh;
+    background-color: transparent;
+    border-left: 0;
+    border-right: 0;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: goldenrod;
+        }
+    }
 }
 
 #showposts {
@@ -322,14 +352,14 @@ h2 {
 
 #recom {
     height: fit-content;
-    padding-top: 2vw;
+    padding-top: 3vw;
     display: flex;
     align-items: center;
     // justify-content: space-between;
 
     #recomRow {
         border: solid 0.1vw #474544;
-        margin-bottom: 1vh;
+        margin-bottom: 2vh;
         // width: fit-content;
         padding: 1vw;
         margin-left: 1vw;
@@ -337,64 +367,44 @@ h2 {
 
         @media only screen and (max-width: 767px) {
             border: none;
-            border-top: solid 0.1vw #4745449a;
-            margin-left: 0;
-            padding-left: 0;
+            border-bottom: solid 0.1vw #4745449a;
+            // margin-left: 0;
+            // padding-left: 0;
+            padding-top: 2vh;
         }
 
         iframe {
             border: goldenrod outset 0.25vw;
             // justify-content: center;
-            // margin-left: auto;
-            // margin-right: auto;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+
+            // max-width: 250px;
+
+            @media only screen and (max-width: 450px) {
+                max-width: 250px;
+                height: 175px;
+                // margin-right: auto;
+                // margin-left: auto;
+            }
+
+            @media only screen and (min-width: 750px) {
+                min-width: 450px;
+                height: 300px;
+                // margin-right: auto;
+                // margin-left: auto;
+            }
+
+            @media only screen and (min-width: 1050px) {
+                min-width: 350px;
+                height: 225px;
+                // margin-right: auto;
+                // margin-left: auto;
+            }
         }
     }
 }
-
-@media only screen and (max-width: 450px) {
-    #recom {
-        float: none;
-        clear: both;
-        width: 100%;
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 25px;
-        height: 0;
-
-        iframe {
-            position: absolute;
-            // top: 0;
-            // left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-}
-// #recom {
-//     position: relative;
-//     padding-bottom: 60%;
-//     padding-top: 30px;
-//     height: 0;
-//     overflow: hidden;
-//     flex: wrap;
-
-//     #recomRow iframe,
-//     #recomRow object,
-//     #recomRow embed {
-//         position: relative;
-//         width: fit-content;
-//         height: fit-content;
-
-//         @media only screen and (max-width: 767px) {
-//             position: absolute;
-//             border: none;
-//             margin-left: 0;
-//             padding-left: 0;
-//             // top: 0;
-//             // left: 0;
-//         }
-//     }
-// }
 
 #soloArt,
 #showSubs {

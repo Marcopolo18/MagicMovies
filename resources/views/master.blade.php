@@ -96,7 +96,7 @@
     <div class="md:hidden flex items-center">
         <button class="outline-none mobile-menu-button">
             <svg
-                class="w-8 h-8 text-gray-500"
+                class="w-12 h-12 text-gray-500"
                 x-show="!showMenu"
                 fill="none"
                 stroke-linecap="round"
@@ -165,6 +165,11 @@
             </li>              
         </ul>
     </div>
+
+    <div id="banner">
+        <a href="/mdregister">Join today to comment and contribute content.<br> 
+        <strong>REGISTER NOW!</strong></a>
+    </div>    
             
     <div class="flex">
         <div id="wrapper">       

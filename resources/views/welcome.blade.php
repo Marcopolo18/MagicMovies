@@ -28,8 +28,8 @@
                     </iframe><br>
                     <p id="recomTit"><strong>new film condemnation</strong></p> 
                 </div>                               
-            </div>  
-            <hr>
+            </div> 
+            
             <div class="flex flex-wrap" id="showposts">                                           
                 @foreach ($articles->where('approved', '1') as $article) 
                     @if($loop->first)                                 
