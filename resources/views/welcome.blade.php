@@ -1,6 +1,7 @@
 @extends('master')
 @section('content')
 
+ 
 {{-- <div class="py-12"> --}}
     {{-- <h2>View posts: </h2> --}}
 <div class="max-w-7xlmx-auto sm:px-6 lg:px-8">

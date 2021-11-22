@@ -18,7 +18,6 @@ html {
     height: fit-content;
     font-family: "Varela Round", sans-serif;
     color: whitesmoke;
-    //margin-bottom: 10vh;
 }
 
 h3 {
@@ -40,7 +39,6 @@ h2 {
 //header image
 #navimage {
     background-image: url(../../public/images/reelmoments.png);
-    // background-image: url(../../public/images/maritrytriple.png);
     background-repeat: repeat-x;
     background-size: 100vw;
     height: 9vw;
@@ -67,14 +65,10 @@ h2 {
 //navbar
 
 .logo-image {
-    // width: 30vw;
     height: fit-content;
-    // border-radius: 7%;
     overflow: hidden;
     margin-right: 5vw;
     border: goldenrod outset 0.25vw;
-    // justify-content: center;
-    // align-content: center;
     border-radius: 30px;
     margin-top: -2.5vh;
     transition: 0.4s;
@@ -112,7 +106,6 @@ h2 {
 #menu {
     display: flex;
     justify-content: center;
-    //align-items: center;
     max-width: 100vw;
     margin: 1vh auto;
     height: fit-content;
@@ -136,9 +129,6 @@ h2 {
     color: black;
     transition: 0.1s;
 }
-// #search:hover {
-//     background-color: rgb(255, 255, 255);
-// }
 
 #searchbtn {
     color: black;
@@ -166,7 +156,6 @@ h2 {
 #searchmob {
     color: whitesmoke !important;
     width: 5vw;
-    // padding-left: 0;
     justify-content: center;
 }
 
@@ -181,12 +170,10 @@ h2 {
 }
 
 #banner {
-    // height: fit-content;
     width: auto;
     margin-right: auto;
     margin-left: auto;
     border: goldenrod solid 0.15vw;
-    // border-radius: 30px;
     transition: 0.4s;
     font-size: 2vh;
     text-align: center;
@@ -220,8 +207,6 @@ h2 {
 }
 
 #postBox {
-    // justify-content: center;
-    // align-content: center;
     padding-left: 1vw;
     padding-right: 1vw;
     margin-right: auto;
@@ -231,8 +216,6 @@ h2 {
         border: none;
         border-top: solid 0.1vw #4745449a;
     }
-    //padding-bottom: 2vh;
-    // padding-top: 2vh;
 }
 
 #newsub,
@@ -272,7 +255,6 @@ h2 {
     justify-content: center;
     text-align: center;
     border-radius: 30px;
-    //margin-top: 15vh;
     padding: 0.5vh 0.5vw;
 
     a {
@@ -333,19 +315,16 @@ h2 {
 //content
 #wrapper {
     min-height: 50vh;
-    // color: black;
     background-color: rgb(107, 31, 49);
     border: goldenrod outset 0.25vw;
     border-radius: 30px;
     width: 76vw;
-    //display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4vh;
     margin-bottom: 12vh;
-    // padding: 2vw 2vh;
     padding-top: 4vh;
     padding-bottom: 4vh;
 }
@@ -355,12 +334,10 @@ h2 {
     padding-top: 3vw;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
 
     #recomRow {
         border: solid 0.1vw #474544;
         margin-bottom: 2vh;
-        // width: fit-content;
         padding: 1vw;
         margin-left: 1vw;
         margin-right: 1vw;
@@ -368,39 +345,28 @@ h2 {
         @media only screen and (max-width: 767px) {
             border: none;
             border-bottom: solid 0.1vw #4745449a;
-            // margin-left: 0;
-            // padding-left: 0;
             padding-top: 2vh;
         }
 
         iframe {
             border: goldenrod outset 0.25vw;
-            // justify-content: center;
             margin-left: auto;
             margin-right: auto;
             position: relative;
 
-            // max-width: 250px;
-
             @media only screen and (max-width: 450px) {
                 max-width: 250px;
                 height: 175px;
-                // margin-right: auto;
-                // margin-left: auto;
             }
 
             @media only screen and (min-width: 750px) {
                 min-width: 450px;
                 height: 300px;
-                // margin-right: auto;
-                // margin-left: auto;
             }
 
             @media only screen and (min-width: 1050px) {
                 min-width: 350px;
                 height: 225px;
-                // margin-right: auto;
-                // margin-left: auto;
             }
         }
     }
@@ -412,8 +378,6 @@ h2 {
 }
 
 .posted {
-    //background-color: rgba(95, 27, 42, 0.459);
-    //padding: 0.5vw;
     height: fit-content;
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -435,8 +399,6 @@ h2 {
 .postText {
     padding-top: 2vh;
     padding-left: 2vw;
-    // background-color: rgba(163, 158, 158, 0.616);
-    // color: black;
 }
 
 .card-body {
@@ -513,7 +475,6 @@ textarea {
 
 #container {
     border: solid 0.3vw #474544;
-    //border-radius: 7%;
     max-width: 70vw;
     margin: 3vw auto;
     position: relative;
@@ -758,20 +719,16 @@ textarea {
 
 .footer-basic .social {
     text-align: center;
-    padding-bottom: 1vh;
     color: darkgray;
+    margin-top: 1vh;
+    line-height: 3vh;
 }
 
 .footer-basic .social > a {
-    // font-size: 24px;
-    width: 4vw;
-    height: 4vh;
     line-height: 3vh;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    border: 0.1vw solid #ccc;
-    margin: 0 0.1vh;
     color: inherit;
     opacity: 0.75;
 }
@@ -781,12 +738,10 @@ textarea {
 }
 
 .footer-basic .copyright .topPage {
-    // margin-top: 1.5vh;
     text-align: center;
-    // font-size: 24px;
     color: #aaa;
-    // margin-bottom: 0;
-    // padding-bottom: 1vh;
+    padding-bottom: 1vh;
+    align-content: center;
 }
 
 //next page button
@@ -798,7 +753,6 @@ textarea {
     span.page-link,
     a.page-link,
     li.page-item.disabled,
-    // .page-item.active .page-link,
     .page-item.disabled {
         background-color: rgb(107, 31, 49);
         color: whitesmoke;

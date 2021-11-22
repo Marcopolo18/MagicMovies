@@ -23,8 +23,8 @@
     <a name="top"></a>   
 
     <div id="navimage">
-    </div>        
-    
+    </div>         
+        
     <div class="hidden md:flex items-center space-x-1" id="menu">
         <nav sail down>           
         
@@ -169,8 +169,8 @@
     <div id="banner">
         <a href="/mdregister">Join today to comment and contribute content.<br> 
         <strong>REGISTER NOW!</strong></a>
-    </div>    
-            
+    </div> 
+              
     <div class="flex">
         <div id="wrapper">       
             @yield('content')
@@ -181,7 +181,7 @@
     <div class="footer-basic">       
         <footer>
             
-            <ul class="list-inline flex justify-between">
+            <ul class="list-inline flex justify-between">                
                 <li class="social place-self-center"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></li>                     
                 <li class="copyright place-self-center">MagicMovies© 2018</li>
                 <li class="topPage place-self-center"><a href="#top">Back to top</a></li>             

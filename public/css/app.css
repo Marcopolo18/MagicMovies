@@ -749,19 +749,16 @@ textarea {
 
 .footer-basic .social {
   text-align: center;
-  padding-bottom: 1vh;
   color: darkgray;
+  margin-top: 1vh;
+  line-height: 3vh;
 }
 
 .footer-basic .social > a {
-  width: 4vw;
-  height: 4vh;
   line-height: 3vh;
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 0.1vw solid #ccc;
-  margin: 0 0.1vh;
   color: inherit;
   opacity: 0.75;
 }
@@ -773,6 +770,8 @@ textarea {
 .footer-basic .copyright .topPage {
   text-align: center;
   color: #aaa;
+  padding-bottom: 1vh;
+  align-content: center;
 }
 
 .pagination {
