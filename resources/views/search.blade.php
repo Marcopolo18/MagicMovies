@@ -10,7 +10,7 @@
                 <ul>
                     <li class="{{ $result->category }} color-gray-900 posted">     
                         <div class="blogPic">
-                            <img src="/images/{{ $result->file_path }}" class="w-100">                                
+                            <img src="/images/{{ $result->img_filename }}" class="w-100">                                
                         </div>
                         <div class="postText">
                             <b><h3>{{$result->title}}</h3></b>                        

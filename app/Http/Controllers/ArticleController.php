@@ -47,18 +47,10 @@ class ArticleController extends Controller
 
     public function allArticles()
     {
-        $articles = Article::latest()->where('approved', '1')->paginate(10); //added where merge md
+        $articles = Article::latest()->where('approved', '1')->paginate(7); //added where merge md
 
         return view('/welcome')->with('articles', $articles);
     }
-
-    // public function approveArticle(Request $request, article_id)
-    // {
-    //     $articleToApprove = Article::(article.id=article_id)
-
-    //     $articleToApprove->approved = boolval(1);
-    //     $articleToApprove->save();
-    // }
 
     //md try approved
     public function approveArticle($id)

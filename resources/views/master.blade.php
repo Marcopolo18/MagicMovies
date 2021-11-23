@@ -137,9 +137,6 @@
                     @endauth                         
                 @endif               
                 
-                    {{-- @hasrole('admin|editor|manager')
-                    <a href="https://google.com/%22%3E Create a new Blogo  </a>
-                    @endhasrole --}}
             @auth        
             <!-- Authentication -->
             <li class="block text-lg px-2 py-4 transition duration-300">
@@ -166,7 +163,7 @@
         </ul>
     </div>
 
-    <div id="banner">
+    <div class="sticky top-0" id="banner">
         <a href="/mdregister">Join today to comment and contribute content.<br> 
         <strong>REGISTER NOW!</strong></a>
     </div> 
@@ -181,10 +178,10 @@
     <div class="footer-basic">       
         <footer>
             
-            <ul class="list-inline flex justify-between">                
+            <ul class="list-inline flex justify-between">  
+                <li class="copyright place-self-center">MagicMovies© 2018</li>               
                 <li class="social place-self-center"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></li>                     
-                <li class="copyright place-self-center">MagicMovies© 2018</li>
-                <li class="topPage place-self-center"><a href="#top">Back to top</a></li>             
+                <li class="topPage place-self-center"><a href="#top">Back to top</a></li>                          
             </ul>           
             
         </footer>             

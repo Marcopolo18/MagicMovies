@@ -2,8 +2,6 @@
 @section('content')
 
  
-{{-- <div class="py-12"> --}}
-    {{-- <h2>View posts: </h2> --}}
 <div class="max-w-7xlmx-auto sm:px-6 lg:px-8">
     <div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
         <div class="place-self-center bg-gray-300 border-b border-gray-200"> 
@@ -13,21 +11,32 @@
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                         gyroscope; picture-in-picture" allowfullscreen>
                     </iframe><br>
-                    <p id="recomTit"><strong>new movie trailer</strong></p>
+                    <p id="recomTit"><strong>New film trailer</strong></p>
+                    <p id="recomText">But I must explain to you  how all this mistaken idea
+                        of denouncing pleasure and praising pain was born and I will give
+                        you a  complete account of the system, and expound the actual teachings.
+                    </p>
                 </div>
                 <div class="" id="recomRow"> 
                     <iframe src="https://www.youtube.com/embed/0ke-v0e3Cd4" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                         gyroscope; picture-in-picture" allowfullscreen>
                     </iframe><br>
-                    <p id="recomTit"><strong>new film recommendation</strong></p> 
+                    <p id="recomTit"><strong>Film recommendation</strong></p>
+                    <p id="recomText">Nor again is there anyone who loves or pursues or desires
+                        to obtain pain of itself, because it is pain, but because occasionally 
+                        circumstances occur in which toil and paincan procure him some great pleasure. </p> 
                 </div>
                 <div class="" id="recomRow"> 
                     <iframe src="https://www.youtube.com/embed/sS6ksY8xWCY" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                         gyroscope; picture-in-picture" allowfullscreen>
                     </iframe><br>
-                    <p id="recomTit"><strong>new film condemnation</strong></p> 
+                    <p id="recomTit"><strong>Film condemnation</strong></p>
+                    <p id="recomText">The European languages are members of the same family. 
+                        Their separate existence is a myth. For science, music, sport, etc,
+                        Europe uses the same vocabulary. The languages only differ in their grammar,
+                        their pronunciation and their most common words.</p>  
                 </div>                               
             </div> 
             
@@ -72,7 +81,7 @@
                                 <b><h3><a id="link" href="/article/{{$article->id}}">{{$article->title}}</a></h3></b>             
                                 <b>Created {{$article->created_at->diffForHumans()}}
                                 by {{$article->author}}</b><br><br>
-                                {{Str::limit($article->content, 100)}}<br><br>
+                                {{Str::limit($article->content, 200)}}<br><br>
                                 <b>Category: {{$article->category}}</b><br>
                             </div>
     

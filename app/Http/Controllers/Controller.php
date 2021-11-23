@@ -28,19 +28,6 @@ class Controller extends BaseController
         $user = User::findOrFail(1);
         $user->assignRole('editor');
     }
-    // public function newpost(Request $request)
-    // {
-    //     $article = new Article();
-    //     $article->category = $request->category;
-    //     $article->title = $request->title;
-    //     $article->author = $request->author;
-    //     $article->content = $request->content;
-    //     $article->file_path = $request->file_path;
-
-    //     $article->save();
-
-    //     return redirect('/editor');
-    // }
 
     public function newsub(Request $request)
     {
@@ -64,30 +51,11 @@ class Controller extends BaseController
         $post->save();
 
         return redirect('/welcome');
-
-        // return back()
-        //     ->with('file_path', $img_filename);
     }
 
     public function approveSub()
     {
     }
-
-    //attempt at image md
-    // public function uploadImage(Request $request)
-    // {
-    //     $this->validate($request, [
-    //         'title' => 'required|string|max:255',
-    //         'images' => 'required|file|mimetypes:image/png, jpg, svg',
-    //     ]);
-    //     $image = new Post;
-    //     $image->title = $request->title;
-    //     if ($request->hasFile('image')) {
-    //         $path = $request->file('image')->store('images', ['disk' => 'my_files']);
-    //         $image->image = $path;
-    //     }
-    //     $image->save();
-    // }
 
     public function showAll()
     {
@@ -103,13 +71,6 @@ class Controller extends BaseController
 
     public function allPosts()
     {
-        // $posts = Post::all();
-
-        // return view('/welcome', [
-        //     'posts' => $posts
-
-
-        // ]);
         $posts = Post::latest()->paginate(5);
 
         return view('/welcome')->with('posts', $posts);

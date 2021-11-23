@@ -1,5 +1,4 @@
 @extends('master')
-{{-- @section('title', 'Message List') --}}
 @section('content')
 
 

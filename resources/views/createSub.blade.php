@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="py-12">
-    <h2 class="flex text-4x1">Create a new post. We will review it prior to posting, in order to ascertain that it meets our standards: </h2>
+    <h2 class="flex text-4x1">Create a post. We will review it, in order to ascertain that it meets our standards: </h2>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-gray-300 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-gray-300 border-b border-gray-200">

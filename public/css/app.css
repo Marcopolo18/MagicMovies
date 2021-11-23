@@ -196,9 +196,10 @@ h2 {
   align-content: center;
   padding: 1.5vh;
   margin-bottom: 2vh;
-  background-color: transparent;
+  background-color: black;
   border-left: 0;
   border-right: 0;
+  z-index: 3;
 }
 #banner a {
   color: white;
@@ -229,7 +230,7 @@ h2 {
   margin-left: auto;
   border: solid 0.1vw #4745449a;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 900px) {
   #postBox {
     border: none;
     border-top: solid 0.1vw #4745449a;
@@ -373,7 +374,7 @@ h2 {
   height: fit-content;
   padding-top: 3vw;
   display: flex;
-  align-items: center;
+  justify-items: center;
 }
 #recom #recomRow {
   border: solid 0.1vw #474544;
@@ -382,11 +383,16 @@ h2 {
   margin-left: 1vw;
   margin-right: 1vw;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 950px) {
   #recom #recomRow {
     border: none;
     border-bottom: solid 0.1vw #4745449a;
     padding-top: 2vh;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  #recom #recomRow {
+    max-width: 400px;
   }
 }
 #recom #recomRow iframe {
@@ -412,6 +418,17 @@ h2 {
     min-width: 350px;
     height: 225px;
   }
+}
+#recom #recomRow #recomTit {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  font-size: 2.5vh;
+  text-align: block;
+}
+#recom #recomRow #recomText {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  text-align: block;
 }
 
 #soloArt,
@@ -442,7 +459,7 @@ h2 {
 .media-body,
 .postText {
   padding-top: 2vh;
-  padding-left: 2vw;
+  padding-left: 1vw;
 }
 
 .card-body {
@@ -516,7 +533,6 @@ textarea {
 }
 
 #container {
-  border: solid 0.3vw #474544;
   max-width: 70vw;
   margin: 3vw auto;
   position: relative;
@@ -749,7 +765,7 @@ textarea {
 
 .footer-basic .social {
   text-align: center;
-  color: darkgray;
+  color: whitesmoke;
   margin-top: 1vh;
   line-height: 3vh;
 }
@@ -777,6 +793,7 @@ textarea {
 .pagination {
   justify-content: right;
   align-content: center;
+  padding-right: 1vw;
 }
 .pagination .page-link,
 .pagination span.page-link,
@@ -788,7 +805,7 @@ textarea {
   border: goldenrod outset 0.2vw;
 }
 .pagination .page-item.active .page-link {
-  background-color: rgba(245, 245, 245, 0.623);
+  background-color: whitesmoke;
   color: black;
   border: goldenrod outset 0.2vw;
 }
