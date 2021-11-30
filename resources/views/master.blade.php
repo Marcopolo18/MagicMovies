@@ -40,7 +40,7 @@
                               
                 
                 <li class="flex"><a class="place-self-center" href="/welcome">Home</a></li>
-                @hasanyrole('user|editor')
+                @hasanyrole('user')
                 <li class="flex" ><a class="place-self-center" href="/createSub">Submit</a></li>                
                 @endrole
                 @role('editor')
@@ -162,12 +162,12 @@
             </li>              
         </ul>
     </div>
-
+    @unlessrole('user|editor')
     <div class="sticky top-0" id="banner">
         <a href="/mdregister">Join today to comment and contribute content.<br> 
         <strong>REGISTER NOW!</strong></a>
     </div> 
-              
+    @endunlessrole      
     <div class="flex">
         <div id="wrapper">       
             @yield('content')
