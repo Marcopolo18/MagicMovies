@@ -179,7 +179,7 @@
         <footer>
             
             <ul class="list-inline flex justify-between">  
-                <li class="copyright place-self-center">MagicMovies© 2018</li>               
+                <li class="copyright place-self-center">MagicMovies© 2021</li>               
                 <li class="social place-self-center"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></li>                     
                 <li class="topPage place-self-center"><a href="#top">Back to top</a></li>                          
             </ul>           
